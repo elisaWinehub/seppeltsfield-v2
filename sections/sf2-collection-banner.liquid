@@ -1,0 +1,48 @@
+{% render 'sf2-fonts' %}
+{{ 'sf2-tokens.css' | asset_url | stylesheet_tag }}
+{{ 'sf2-components.css' | asset_url | stylesheet_tag }}
+{{ 'sf2-collection.css' | asset_url | stylesheet_tag }}
+
+{%- capture section_style -%}{% render 'sf2-scheme-vars', color_scheme: section.settings.color_scheme, spacing_preset: section.settings.spacing_preset %}{%- endcapture -%}
+
+<section class="sf2-col-banner sf2-section" style="{{ section_style | strip }}">
+  <div class="sf2-wrap sf2-col-banner__grid">
+    <div class="sf2-col-banner__copy">
+      {% render 'sf2-eyebrow', text: section.settings.eyebrow, brand: true %}
+      <h1 class="sf2-serif">{{ collection.title }}</h1>
+      {%- if collection.description != blank -%}
+        <div class="sf2-col-banner__body rte">{{ collection.description }}</div>
+      {%- endif -%}
+    </div>
+    {%- if section.settings.back_button_label != blank -%}
+      {% render 'sf2-button', preset: 'outline_dark', label: section.settings.back_button_label, url: section.settings.back_button_url, class: 'sf2-col-banner__back' %}
+    {%- endif -%}
+  </div>
+  {%- if section.settings.custom_image != blank -%}
+    <div class="sf2-col-banner__media sf2-wrap">
+      {% render 'sf2-picture', image: section.settings.custom_image, sizes: '(min-width: 990px) 1320px, 100vw' %}
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "SF2 Collection Banner",
+  "tag": "section",
+  "class": "sf2-col-banner-section",
+  "enabled_on": { "templates": ["collection"] },
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Collection" },
+    { "type": "image_picker", "id": "custom_image", "label": "Optional banner image" },
+    { "type": "text", "id": "back_button_label", "label": "Back button label", "default": "Back to Shop" },
+    { "type": "url", "id": "back_button_url", "label": "Back button URL" },
+    { "type": "select", "id": "color_scheme", "label": "Color scheme", "default": "ivory", "options": [
+      { "value": "light", "label": "Light" }, { "value": "ivory", "label": "Ivory" }
+    ]},
+    { "type": "select", "id": "spacing_preset", "label": "Spacing", "default": "compact", "options": [
+      { "value": "compact", "label": "Compact" }, { "value": "standard", "label": "Standard" }
+    ]}
+  ],
+  "presets": [{ "name": "SF2 Collection Banner" }]
+}
+{% endschema %}
