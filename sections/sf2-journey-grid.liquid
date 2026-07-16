@@ -4,18 +4,23 @@
 {{ 'sf2-home.css' | asset_url | stylesheet_tag }}
 
 {%- capture section_style -%}{% render 'sf2-scheme-vars', color_scheme: section.settings.color_scheme, spacing_preset: section.settings.spacing_preset %}{%- endcapture -%}
+{%- assign head_scheme = 'dark' -%}
+{%- if section.settings.color_scheme == 'light' or section.settings.color_scheme == 'ivory' -%}{%- assign head_scheme = '' -%}{%- endif -%}
+{%- assign grid_style = section.settings.grid_style | default: 'connected' -%}
 
-<section id="choose-your-journey" class="sf2-journey sf2-section" style="{{ section_style | strip }}">
+<section id="choose-your-journey" class="sf2-journey sf2-section{% if grid_style == 'gapped' %} sf2-journey--gapped{% endif %}" style="{{ section_style | strip }}">
   <div class="sf2-wrap">
     {% render 'sf2-section-header',
       eyebrow: section.settings.eyebrow,
       eyebrow_brand: true,
       heading: section.settings.heading,
       body: section.settings.body,
-      scheme: 'dark'
+      scheme: head_scheme
     %}
   </div>
-  <div class="sf2-journey__grid">
+  {%- assign grid_class = 'sf2-journey__grid' -%}
+  {%- if grid_style == 'gapped' -%}{%- assign grid_class = 'sf2-wrap sf2-journey__grid' -%}{%- endif -%}
+  <div class="{{ grid_class }}">
     {%- for block in section.blocks -%}
       <a class="sf2-journey__card" href="{{ block.settings.url }}" {{ block.shopify_attributes }}>
         {%- if block.settings.image != blank -%}
@@ -40,7 +45,11 @@
     { "type": "text", "id": "heading", "label": "Heading", "default": "Explore Seppeltsfield your way." },
     { "type": "textarea", "id": "body", "label": "Body", "default": "Five clear pathways mirror the approved navigation and help visitors immediately choose between storytelling, planning, shopping, membership and bookings." },
     { "type": "select", "id": "color_scheme", "label": "Color scheme", "default": "dark", "options": [
-      { "value": "dark", "label": "Dark" }, { "value": "black", "label": "Black" }
+      { "value": "dark", "label": "Dark" }, { "value": "black", "label": "Black" },
+      { "value": "light", "label": "Light" }, { "value": "ivory", "label": "Ivory" }
+    ]},
+    { "type": "select", "id": "grid_style", "label": "Grid style", "default": "connected", "options": [
+      { "value": "connected", "label": "Connected cards" }, { "value": "gapped", "label": "Gapped cards" }
     ]},
     { "type": "select", "id": "spacing_preset", "label": "Spacing", "default": "standard", "options": [
       { "value": "compact", "label": "Compact" }, { "value": "standard", "label": "Standard" }, { "value": "spacious", "label": "Spacious" }
@@ -53,7 +62,7 @@
       "settings": [
         { "type": "image_picker", "id": "image", "label": "Image" },
         { "type": "text", "id": "title", "label": "Title", "default": "Discover" },
-        { "type": "url", "id": "url", "label": "URL" }
+        { "type": "text", "id": "url", "label": "URL or anchor" }
       ]
     }
   ],

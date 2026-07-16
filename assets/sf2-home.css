@@ -40,6 +40,9 @@
 .sf2-journey__copy { position: absolute; z-index: 2; left: 24px; right: 24px; bottom: 26px; }
 .sf2-journey__copy span { font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sf-brand-soft); }
 .sf2-journey__copy h3 { font-family: var(--sf-font-serif); font-size: 1.9rem; line-height: 1; margin: 8px 0; }
+.sf2-journey--gapped .sf2-journey__grid { gap: 16px; min-height: auto; }
+.sf2-journey--gapped .sf2-journey__card { border-left: 0; min-height: 360px; background: #16181b; }
+.sf2-journey--gapped .sf2-journey__card .sf2-picture__img, .sf2-journey--gapped .sf2-journey__card img { min-height: 360px; }
 .sf2-intro { position: relative; overflow: hidden; }
 .sf2-intro::before { content: "S"; position: absolute; right: -2vw; top: -11vw; font-family: var(--sf-font-serif); font-size: 34vw; line-height: 1; color: rgba(185,154,93,.08); pointer-events: none; }
 .sf2-intro__grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 90px; align-items: center; position: relative; }
@@ -111,6 +114,9 @@
 .sf2-footer h4 { font-size: 0.66rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sf-brand-soft); margin: 0 0 8px; }
 .sf2-footer a { display: block; font-size: 0.74rem; color: rgba(255,255,255,.7); margin: 8px 0; text-decoration: none; }
 .sf2-footer__legal { border-top: 1px solid rgba(255,255,255,.12); margin-top: 46px; padding-top: 20px; display: flex; justify-content: space-between; font-size: 0.64rem; color: rgba(255,255,255,.4); }
+@media (max-width: 1050px) {
+  .sf2-journey--gapped .sf2-journey__grid { grid-template-columns: 1fr 1fr; }
+}
 @media (max-width: 1000px) {
   .sf2-hero__content { grid-template-columns: 1fr; }
   .sf2-hero__note { display: none; }
