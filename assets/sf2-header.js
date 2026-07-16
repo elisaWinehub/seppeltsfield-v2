@@ -2,6 +2,16 @@
   const header = document.querySelector('[data-sf2-header]');
   if (!header) return;
 
+  function setHeaderOffset() {
+    const announcement = document.querySelector('#header-group .announcement-bar');
+    const height = announcement ? announcement.offsetHeight : 0;
+    document.documentElement.style.setProperty('--sf2-header-offset', height + 'px');
+  }
+
+  setHeaderOffset();
+  window.addEventListener('resize', setHeaderOffset);
+  document.addEventListener('shopify:section:load', setHeaderOffset);
+
   const drawer = document.querySelector('[data-sf2-drawer]');
   const openBtns = document.querySelectorAll('[data-sf2-menu-open]');
   const closeBtns = document.querySelectorAll('[data-sf2-menu-close]');

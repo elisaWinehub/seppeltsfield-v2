@@ -1,6 +1,4 @@
-.sf2-utility { height: 30px; background: #0b0c0e; color: rgba(255,255,255,0.74); display: grid; place-items: center; font-size: 0.64rem; letter-spacing: 0.08em; }
-.sf2-utility a { color: inherit; text-decoration: none; }
-.sf2-header { position: absolute; z-index: 30; top: 30px; left: 0; width: 100%; color: #fff; transition: background 0.3s ease, color 0.3s ease; }
+.sf2-header { position: absolute; z-index: 30; top: var(--sf2-header-offset, 0px); left: 0; width: 100%; color: #fff; transition: background 0.3s ease, color 0.3s ease, top 0.3s ease; }
 .sf2-header.is-solid { position: fixed; top: 0; background: var(--sf-coal-deep); }
 .sf2-header__nav { height: 92px; display: grid; grid-template-columns: 240px 1fr auto; align-items: center; gap: 25px; }
 .sf2-header__logo img { width: auto; max-width: var(--sf2-logo-width, 188px); height: auto; object-fit: contain; filter: brightness(0) invert(1); }

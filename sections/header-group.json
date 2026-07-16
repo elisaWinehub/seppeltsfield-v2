@@ -2,6 +2,35 @@
   "type": "header",
   "name": "Header",
   "sections": {
+    "header_announcements": {
+      "type": "header-announcements",
+      "blocks": {
+        "announcement_1": {
+          "type": "_announcement",
+          "settings": {
+            "text": "WELCOME TO SEPPELTSFIELD · BAROSSA VALLEY · ESTABLISHED 1851",
+            "link": "",
+            "font": "var(--font-body--family)",
+            "font_size": "0.64rem",
+            "weight": "400",
+            "letter_spacing": "loose",
+            "case": "uppercase",
+            "text_color": "rgba(255, 255, 255, 0.74)"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_1"
+      ],
+      "settings": {
+        "speed": 5,
+        "section_width": "full-width",
+        "background_color": "#0b0c0e",
+        "divider_width": 0,
+        "padding-block-start": 7,
+        "padding-block-end": 7
+      }
+    },
     "sf2_header": {
       "type": "sf2-header",
       "settings": {
@@ -14,6 +43,7 @@
     }
   },
   "order": [
+    "header_announcements",
     "sf2_header"
   ]
 }

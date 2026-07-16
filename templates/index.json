@@ -1,12 +1,5 @@
 {
   "sections": {
-    "sf2_announcement": {
-      "type": "sf2-announcement-bar",
-      "settings": {
-        "text": "WELCOME TO SEPPELTSFIELD · BAROSSA VALLEY · ESTABLISHED 1851",
-        "link_url": ""
-      }
-    },
     "sf2_hero": {
       "type": "sf2-hero-slider",
       "blocks": {
@@ -537,7 +530,6 @@
     }
   },
   "order": [
-    "sf2_announcement",
     "sf2_hero",
     "sf2_why",
     "sf2_journey",
