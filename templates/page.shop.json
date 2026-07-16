@@ -106,10 +106,10 @@
           "type": "collection_card",
           "settings": {
             "collection": "",
-            "title_override": "Gift Packs",
-            "image": "shopify://shop_images/Seppelsfield-OCT24-0145.jpg",
-            "body": "Curated wine selections for celebrations, milestones and meaningful occasions.",
-            "url_override": "/collections/gift-packs"
+            "title_override": "Limited Releases",
+            "image": "shopify://shop_images/Para-Grand-Tawny-91-Points.jpg",
+            "body": "Rare and seasonal releases showcasing the depth and character of Seppeltsfield winemaking.",
+            "url_override": "/collections/limited-releases"
           }
         },
         "c6": {
@@ -144,7 +144,7 @@
         "image": "shopify://shop_images/finoHERO.jpg",
         "badge_text": "Wine · Dining · Stay",
         "layout": "copy_left",
-        "color_scheme": "ivory",
+        "color_scheme": "dark",
         "spacing_preset": "spacious"
       }
     },
