@@ -1,8 +1,10 @@
 (function () {
   const header = document.querySelector('[data-sf2-header]');
-  if (!header) return;
+  const headerGroup = document.querySelector('#header-group');
+  if (!header || !headerGroup) return;
 
   function setHeaderOffset() {
+    if (headerGroup.classList.contains('is-scrolled')) return;
     const announcement = document.querySelector('#header-group .announcement-bar');
     const height = announcement ? announcement.offsetHeight : 0;
     document.documentElement.style.setProperty('--sf2-header-offset', height + 'px');
@@ -18,16 +20,19 @@
   let lastFocus = null;
 
   function setSolid() {
-    const announcement = document.querySelector('#header-group .announcement-bar');
     const mode = header.dataset.transparency;
     if (mode === 'always_solid') return;
-    if (window.scrollY > 40) {
+
+    const scrolled = window.scrollY > 40;
+
+    if (scrolled) {
+      headerGroup.classList.add('is-scrolled');
       header.classList.add('is-solid');
-      document.documentElement.style.setProperty('--sf2-header-offset', '0px');
-      if (announcement) announcement.classList.add('is-hidden');
+      document.body.style.setProperty('padding-top', header.offsetHeight + 'px');
     } else if (mode !== 'always_transparent') {
+      headerGroup.classList.remove('is-scrolled');
       header.classList.remove('is-solid');
-      if (announcement) announcement.classList.remove('is-hidden');
+      document.body.style.removeProperty('padding-top');
       setHeaderOffset();
     }
   }
@@ -56,9 +61,13 @@
     if (e.key === 'Escape') closeDrawer();
   });
 
-  if (header.dataset.transparency === 'always_transparent') header.classList.remove('is-solid');
-  else if (header.dataset.transparency === 'always_solid') header.classList.add('is-solid');
-  else {
+  if (header.dataset.transparency === 'always_transparent') {
+    header.classList.remove('is-solid');
+    headerGroup.classList.remove('is-scrolled');
+  } else if (header.dataset.transparency === 'always_solid') {
+    header.classList.add('is-solid');
+    headerGroup.classList.add('is-scrolled');
+  } else {
     setSolid();
     window.addEventListener('scroll', setSolid, { passive: true });
   }

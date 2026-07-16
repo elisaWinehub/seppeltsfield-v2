@@ -1,11 +1,57 @@
-.sf2-header { position: absolute; z-index: 30; top: var(--sf2-header-offset, 0px); left: 0; width: 100%; color: #fff; transition: background 0.3s ease, color 0.3s ease, top 0.3s ease; }
-.sf2-header.is-solid { position: fixed; top: 0; background: #000; }
+#header-group {
+  position: relative;
+  z-index: 30;
+}
+
+.sf2-header {
+  position: absolute;
+  z-index: 2;
+  top: var(--sf2-header-offset, 0px);
+  left: 0;
+  width: 100%;
+  color: #fff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sf2-header.is-solid {
+  background: #000;
+}
+
+#header-group.is-scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: #000;
+}
+
+#header-group.is-scrolled .sf2-header {
+  position: relative;
+  top: auto;
+  background: #000;
+}
+
+.template-collection #header-group.is-scrolled,
+.template-search #header-group.is-scrolled,
+.template-product #header-group.is-scrolled {
+  background: #fff;
+}
+
+.template-collection #header-group.is-scrolled .sf2-header,
+.template-search #header-group.is-scrolled .sf2-header,
+.template-product #header-group.is-scrolled .sf2-header {
+  background: #fff;
+  color: var(--sf-black);
+}
+
 .template-collection .sf2-header.is-solid,
 .template-search .sf2-header.is-solid,
 .template-product .sf2-header.is-solid {
   background: #fff;
   color: var(--sf-black);
 }
+
 .sf2-header__nav { height: 92px; display: grid; grid-template-columns: 240px 1fr auto; align-items: center; gap: 25px; }
 .sf2-header__logo img { width: auto; max-width: var(--sf2-logo-width, 188px); height: auto; object-fit: contain; }
 .sf2-header__links { display: flex; justify-content: center; gap: 28px; font-size: 0.75rem; list-style: none; margin: 0; padding: 0; }
@@ -39,7 +85,8 @@
   padding-block-start: calc(var(--padding-block-start, 12px) + 5px);
   padding-block-end: calc(var(--padding-block-end, 12px) + 5px);
 }
-#header-group .announcement-bar.is-hidden {
+#header-group.is-scrolled .header-announcements-section,
+#header-group.is-scrolled .shopify-section:has(.announcement-bar) {
   display: none;
 }
 #header-group .announcement-bar__slides {
