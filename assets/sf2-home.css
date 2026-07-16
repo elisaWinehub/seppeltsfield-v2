@@ -76,7 +76,8 @@
 .sf2-history__chapter span { display: inline-flex; width: 18px; height: 18px; flex: 0 0 auto; }
 .sf2-history__chapter .sf2-icon { width: 100%; height: 100%; }
 .sf2-history__callout { position: absolute; left: 11px; bottom: 44px; background: var(--sf-blue); color: #111; width: 250px; padding: 26px; font-family: var(--sf-font-serif); font-size: 1.4rem; line-height: 1.1; }
-.sf2-collection__row { display: grid; grid-template-columns: 1.1fr 0.9fr; min-height: 620px; margin-top: 22px; background: #fff; }
+.sf2-collection.sf2-section { --sf2-pad-bottom-m: 0; --sf2-pad-bottom-d: 0; }
+.sf2-collection__row { display: grid; grid-template-columns: 1.1fr 0.9fr; min-height: 620px; margin-top: 0; background: #fff; }
 .sf2-collection__row.is-reverse { grid-template-columns: 0.9fr 1.1fr; }
 .sf2-collection__row.is-reverse .sf2-collection__media { order: 2; }
 .sf2-collection__media { position: relative; overflow: hidden; }
