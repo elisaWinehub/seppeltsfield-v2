@@ -3,7 +3,7 @@
   if (!header) return;
 
   function syncAnchorOffset() {
-    var top = header.classList.contains('is-solid') ? header.offsetHeight : 0;
+    var top = header.classList.contains('is-scrolled') ? header.offsetHeight : 0;
     document.documentElement.style.setProperty('--sf2-anchor-top', top + 'px');
     document.documentElement.style.setProperty('--sf2-scroll-padding', (top + 56) + 'px');
   }

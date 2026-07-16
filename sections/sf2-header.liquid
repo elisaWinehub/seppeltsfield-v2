@@ -15,17 +15,32 @@
   assign logo_w = section.settings.logo_width | default: settings.logo_height | default: 36
   assign menu = section.settings.main_menu
   assign transparent = false
+  assign hero_header = false
+  assign commerce_solid = false
+  assign scrolled_on_load = false
+
   if section.settings.transparency_mode == 'always_transparent'
     assign transparent = true
-  elsif section.settings.transparency_mode == 'auto' and template.name == 'index'
-    assign transparent = true
+    assign hero_header = true
+  elsif section.settings.transparency_mode == 'always_solid'
+    assign scrolled_on_load = true
+  elsif section.settings.transparency_mode == 'auto'
+    if template.name == 'collection' or template.name == 'product' or template.name == 'search'
+      assign commerce_solid = true
+      assign scrolled_on_load = true
+    else
+      assign transparent = true
+      assign hero_header = true
+    endif
   endif
 -%}
 
 <header
-  class="sf2-header{% if transparent %} sf2-header--transparent{% endif %}"
+  class="sf2-header{% if transparent %} sf2-header--transparent{% endif %}{% if scrolled_on_load %} is-scrolled{% endif %}"
   data-sf2-header
   data-transparency="{{ section.settings.transparency_mode }}"
+  data-hero-header="{% if hero_header %}true{% else %}false{% endif %}"
+  data-commerce-solid="{% if commerce_solid %}true{% else %}false{% endif %}"
   style="--sf2-logo-width: {{ logo_w }}px;"
 >
   <div class="sf2-wrap sf2-header__nav">

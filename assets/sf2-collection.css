@@ -32,7 +32,7 @@
 
 .sf2-collection-toolbar {
   position: sticky;
-  top: var(--sf2-header-offset, 84px);
+  top: var(--sf2-header-group-height, 84px);
   z-index: 35;
   padding: 18px 0;
   border-bottom: 1px solid var(--sf-border);
@@ -70,7 +70,7 @@
 
 .sf2-collection-listing { padding: 42px 0 86px; background: #fff; }
 .sf2-collection-listing__grid { display: grid; grid-template-columns: 260px 1fr; gap: 36px; align-items: start; }
-.sf2-collection-listing__filters { position: sticky; top: calc(var(--sf2-header-offset, 84px) + 78px); align-self: start; }
+.sf2-collection-listing__filters { position: sticky; top: calc(var(--sf2-header-group-height, 84px) + 78px); align-self: start; }
 
 /* Hide Horizon duplicate horizontal controls; keep mobile drawer toggle */
 .sf2-collection-listing__filters > .facets.facets--horizontal.facets-controls-wrapper { display: none; }
