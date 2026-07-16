@@ -4,13 +4,19 @@
 {{ 'sf2-inner-pages.css' | asset_url | stylesheet_tag }}
 
 {%- capture section_style -%}{% render 'sf2-scheme-vars', color_scheme: section.settings.color_scheme, spacing_preset: section.settings.spacing_preset %}{%- endcapture -%}
+{%- assign anchor_id = section.settings.section_anchor_id | default: '' -%}
 
-<section class="sf2-benefits sf2-section" style="{{ section_style | strip }}">
+<section{% if anchor_id != blank %} id="{{ anchor_id }}"{% endif %} class="sf2-benefits sf2-section{% if section.settings.show_decorative_circle %} sf2-benefits--circle{% endif %}{% if section.settings.color_scheme == 'dark' or section.settings.color_scheme == 'black' %} sf2-benefits--dark{% endif %}" style="{{ section_style | strip }}">
   <div class="sf2-wrap sf2-benefits__grid">
     <div class="sf2-benefits__copy">
-      {% render 'sf2-eyebrow', text: section.settings.eyebrow %}
+      {% render 'sf2-eyebrow', text: section.settings.eyebrow, brand: section.settings.eyebrow_brand %}
       <h2 class="sf2-serif">{{ section.settings.heading }}</h2>
       {%- if section.settings.body != blank -%}<p>{{ section.settings.body }}</p>{%- endif -%}
+      {%- if section.settings.link_label != blank and section.settings.link_url != blank -%}
+        <div class="sf2-benefits__link">
+          {% render 'sf2-button', preset: 'text_link', label: section.settings.link_label, url: section.settings.link_url %}
+        </div>
+      {%- endif -%}
       {%- if section.settings.show_login_link -%}
         <div class="sf2-benefits__login">
           {% render 'sf2-button', preset: 'text_link', label: section.settings.login_label, url: routes.account_login_url %}
@@ -35,13 +41,19 @@
   "tag": "section",
   "class": "sf2-benefits-section",
   "settings": [
+    { "type": "text", "id": "section_anchor_id", "label": "Section anchor ID" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Wine club benefits" },
+    { "type": "checkbox", "id": "eyebrow_brand", "label": "Brand-colour eyebrow", "default": false },
     { "type": "text", "id": "heading", "label": "Heading", "default": "Membership beyond the bottle." },
     { "type": "textarea", "id": "body", "label": "Body", "default": "Benefits should be easy to scan and visually separated instead of being buried in a long paragraph." },
+    { "type": "text", "id": "link_label", "label": "Link label" },
+    { "type": "url", "id": "link_url", "label": "Link URL" },
     { "type": "checkbox", "id": "show_login_link", "label": "Show member login link", "default": true },
     { "type": "text", "id": "login_label", "label": "Login link label", "default": "Member Login" },
+    { "type": "checkbox", "id": "show_decorative_circle", "label": "Show decorative circle", "default": false },
     { "type": "select", "id": "color_scheme", "label": "Color scheme", "default": "light", "options": [
-      { "value": "light", "label": "Light" }, { "value": "ivory", "label": "Ivory" }
+      { "value": "light", "label": "Light" }, { "value": "ivory", "label": "Ivory" },
+      { "value": "dark", "label": "Dark" }, { "value": "black", "label": "Black" }
     ]},
     { "type": "select", "id": "spacing_preset", "label": "Spacing", "default": "spacious", "options": [
       { "value": "standard", "label": "Standard" }, { "value": "spacious", "label": "Spacious" }
@@ -55,7 +67,9 @@
       "settings": [
         { "type": "select", "id": "icon", "label": "Icon", "default": "member-pricing", "options": [
           { "value": "member-pricing", "label": "Member pricing" }, { "value": "delivery", "label": "Delivery" },
-          { "value": "exclusive", "label": "Exclusive" }, { "value": "estate-access", "label": "Estate access" }
+          { "value": "exclusive", "label": "Exclusive" }, { "value": "estate-access", "label": "Estate access" },
+          { "value": "vineyard-stewardship", "label": "Vineyard stewardship" }, { "value": "biodiversity", "label": "Biodiversity" },
+          { "value": "energy", "label": "Energy and resources" }, { "value": "custodianship", "label": "Custodianship" }
         ]},
         { "type": "text", "id": "title", "label": "Title", "default": "Member pricing" },
         { "type": "textarea", "id": "body", "label": "Body" }
