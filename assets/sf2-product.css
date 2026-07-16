@@ -1,11 +1,6 @@
-/* Commerce header on product templates — solid black from first paint */
+/* Commerce header on product templates */
 .template-product .sf2-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background-color: #000000;
   color: #fff;
-  border-bottom: 0;
 }
 .template-product .sf2-header .sf2-header__logo img {
   filter: none;

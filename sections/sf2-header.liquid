@@ -17,17 +17,14 @@
   assign transparent = false
   assign hero_header = false
   assign commerce_solid = false
-  assign scrolled_on_load = false
 
   if section.settings.transparency_mode == 'always_transparent'
     assign transparent = true
     assign hero_header = true
   elsif section.settings.transparency_mode == 'always_solid'
-    assign scrolled_on_load = true
   elsif section.settings.transparency_mode == 'auto'
     if template.name == 'collection' or template.name == 'product' or template.name == 'search'
       assign commerce_solid = true
-      assign scrolled_on_load = true
     else
       assign transparent = true
       assign hero_header = true
@@ -36,7 +33,7 @@
 -%}
 
 <header
-  class="sf2-header{% if transparent %} sf2-header--transparent{% endif %}{% if scrolled_on_load %} is-scrolled{% endif %}"
+  class="sf2-header{% if transparent %} sf2-header--transparent{% endif %}"
   data-sf2-header
   data-transparency="{{ section.settings.transparency_mode }}"
   data-hero-header="{% if hero_header %}true{% else %}false{% endif %}"
@@ -94,7 +91,7 @@
           {%- endfor -%}
         </ul>
       {%- endif -%}
-      {% render 'sf2-button', preset: 'outline_light', label: section.settings.cta_label, url: section.settings.cta_url %}
+      {% render 'sf2-button', preset: 'light', label: section.settings.cta_label, url: section.settings.cta_url %}
     </div>
   </div>
 </header>
