@@ -24,8 +24,8 @@
             "primary_button_url": "/pages/heritage-story",
             "secondary_button_label": "Plan Your Visit",
             "secondary_button_url": "/pages/visit",
-            "note_heading": "The jewel in the crown",
-            "note_body": "Discover the historic 1878 Centennial Cellar and taste a wine from your birth year."
+            "note_heading": "",
+            "note_body": ""
           }
         },
         "slide_2": {
@@ -40,8 +40,8 @@
             "primary_button_url": "/collections/centenniral",
             "secondary_button_label": "Discover the Cellar",
             "secondary_button_url": "/pages/heritage-story",
-            "note_heading": "1878 to today",
-            "note_body": "The world's only unbroken lineage of single-vintage tawny spanning more than a century."
+            "note_heading": "",
+            "note_body": ""
           }
         },
         "slide_3": {
@@ -56,8 +56,8 @@
             "primary_button_url": "/pages/visit",
             "secondary_button_label": "What's On",
             "secondary_button_url": "/pages/functions-events",
-            "note_heading": "More than a winery",
-            "note_body": "Cellar Door, FINO, JamFactory, The Lodge and a collection of makers across the estate."
+            "note_heading": "",
+            "note_body": ""
           }
         },
         "quick_1": {
