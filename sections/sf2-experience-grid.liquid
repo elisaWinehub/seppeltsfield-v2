@@ -6,11 +6,12 @@
 
 {%- capture section_style -%}{% render 'sf2-scheme-vars', color_scheme: section.settings.color_scheme, spacing_preset: section.settings.spacing_preset %}{%- endcapture -%}
 {%- assign card_style = section.settings.card_style | default: 'bordered' -%}
+{%- assign grid_layout = section.settings.grid_layout | default: 'equal' -%}
 {%- assign anchor_id = section.settings.section_anchor_id | default: '' -%}
 {%- assign head_scheme = 'dark' -%}
 {%- if card_style == 'bordered' -%}{%- assign head_scheme = '' -%}{%- endif -%}
 
-<section{% if anchor_id != blank %} id="{{ anchor_id }}"{% endif %} class="sf2-experience sf2-section sf2-experience--{{ card_style }}" style="{{ section_style | strip }}">
+<section{% if anchor_id != blank %} id="{{ anchor_id }}"{% endif %} class="sf2-experience sf2-section sf2-experience--{{ card_style }}{% if grid_layout == 'featured_first' %} sf2-experience--featured-first{% endif %}" style="{{ section_style | strip }}">
   <div class="sf2-wrap">
     {% render 'sf2-section-header',
       eyebrow: section.settings.eyebrow,
@@ -53,6 +54,9 @@
     { "type": "textarea", "id": "body", "label": "Body" },
     { "type": "select", "id": "card_style", "label": "Card style", "default": "bordered", "options": [
       { "value": "bordered", "label": "Bordered cards" }, { "value": "overlay", "label": "Image overlay" }
+    ]},
+    { "type": "select", "id": "grid_layout", "label": "Grid layout", "default": "equal", "options": [
+      { "value": "equal", "label": "Equal columns" }, { "value": "featured_first", "label": "Featured first card" }
     ]},
     { "type": "select", "id": "color_scheme", "label": "Color scheme", "default": "light", "options": [
       { "value": "light", "label": "Light" }, { "value": "ivory", "label": "Ivory" }, { "value": "dark", "label": "Dark" }, { "value": "black", "label": "Black" }

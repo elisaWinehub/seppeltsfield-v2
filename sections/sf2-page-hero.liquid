@@ -39,8 +39,14 @@
         <div class="sf2-page-hero__body">{{ section.settings.body }}</div>
       {%- endif -%}
       <div class="sf2-page-hero__actions">
-        {%- if section.settings.button_label != blank -%}
-          {% render 'sf2-button', preset: section.settings.button_preset, label: section.settings.button_label, url: section.settings.button_url %}
+        {%- liquid
+          assign hero_btn_url = section.settings.button_link
+          if hero_btn_url == blank
+            assign hero_btn_url = section.settings.button_url
+          endif
+        -%}
+        {%- if section.settings.button_label != blank and hero_btn_url != blank -%}
+          {% render 'sf2-button', preset: section.settings.button_preset, label: section.settings.button_label, url: hero_btn_url %}
         {%- endif -%}
         {%- if section.settings.secondary_button_label != blank -%}
           {% render 'sf2-button', preset: section.settings.secondary_button_preset, label: section.settings.secondary_button_label, url: section.settings.secondary_button_url %}
@@ -73,6 +79,7 @@
     { "type": "richtext", "id": "body", "label": "Body" },
     { "type": "text", "id": "button_label", "label": "Button label", "default": "Explore Membership" },
     { "type": "url", "id": "button_url", "label": "Button URL" },
+    { "type": "text", "id": "button_link", "label": "Button link override (anchors e.g. #membership)" },
     { "type": "select", "id": "button_preset", "label": "Button preset", "default": "primary_blue", "options": [
       { "value": "primary_blue", "label": "Primary Blue" }, { "value": "primary_dark", "label": "Primary Dark" },
       { "value": "light", "label": "Light" }, { "value": "outline_light", "label": "Outline Light" }
