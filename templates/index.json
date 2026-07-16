@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "sf2_hero": {
@@ -6,8 +15,8 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "background_image": "shopify://shop_images/Seppeltsfield_Wide_Estate_-_Dragan_Fine_Art_Photography.jpg",
-            "mobile_image": "shopify://shop_images/Seppeltsfield_Wide_Estate_-_Dragan_Fine_Art_Photography.jpg",
+            "background_image": "shopify://shop_images/Seppelsfield-OCT24-0134.jpg",
+            "mobile_image": "shopify://shop_images/Seppelsfield-OCT24-0134.jpg",
             "eyebrow": "175 years of Seppeltsfield",
             "heading": "A legacy crowned by time.",
             "body": "<p>Seven generations of winemaking, enduring craftsmanship and one of Australia's most significant wine estates.</p>",
@@ -38,8 +47,8 @@
         "slide_3": {
           "type": "slide",
           "settings": {
-            "background_image": "shopify://shop_images/finoHERO.jpg",
-            "mobile_image": "shopify://shop_images/finoHERO.jpg",
+            "background_image": "shopify://shop_images/Seppelsfield-OCT24-0127.jpg",
+            "mobile_image": "shopify://shop_images/Seppelsfield-OCT24-0127.jpg",
             "eyebrow": "The Seppeltsfield Estate",
             "heading": "Taste, dine, stay and discover.",
             "body": "<p>A landmark Barossa destination bringing together wine, food, art, gardens, architecture and hospitality.</p>",
@@ -159,7 +168,7 @@
         "journey_2": {
           "type": "journey_card",
           "settings": {
-            "image": "shopify://shop_images/finoHERO.jpg",
+            "image": "shopify://shop_images/Seppelsfield-OCT24-0208.jpg",
             "title": "Visit",
             "url": "/pages/visit"
           }
@@ -201,6 +210,7 @@
         "heading": "Explore Seppeltsfield your way.",
         "body": "Five clear pathways mirror the approved navigation and help visitors immediately choose between storytelling, planning, shopping, membership and bookings.",
         "color_scheme": "dark",
+        "grid_style": "connected",
         "spacing_preset": "standard"
       }
     },
@@ -237,7 +247,7 @@
         "gateway_2": {
           "type": "gateway_card",
           "settings": {
-            "image": "shopify://shop_images/finoHERO.jpg",
+            "image": "shopify://shop_images/Seppelsfield-OCT24-0225.jpg",
             "title": "Dine at the Estate",
             "body": "FINO, Café Gardens and seasonal food experiences across the property.",
             "url": "/pages/fino-restaurant"
@@ -342,7 +352,8 @@
           "settings": {
             "collection": "",
             "title_override": "Centennial Collection",
-            "image": "shopify://shop_images/provenance-of-para-HERO.jpg",
+            "image": "shopify://shop_images/seppelsfield-oct24-0060-web-1751248450385.jpg",
+            "label_text": "",
             "eyebrow": "The icon",
             "body": "<p>An unparalleled lineage of single-vintage Para Tawny matured in the historic Centennial Cellar. This should be the principal collection story on the homepage.</p>",
             "meta_tags": "From 1878, Single vintage, Historic releases",
@@ -355,7 +366,8 @@
           "settings": {
             "collection": "",
             "title_override": "Luxury Still Wines",
-            "image": "shopify://shop_images/Seppelsfield-OCT24-0004.jpg",
+            "image": "shopify://shop_images/para-grand--glasses-on-side-table-by-sofa-1687414300459.jpg",
+            "label_text": "",
             "eyebrow": "Estate grown",
             "body": "<p>Contemporary expressions of the Barossa shaped by vineyard character, thoughtful winemaking and the heritage of the estate.</p>",
             "meta_tags": "Red, White, Rosé, Sparkling",
@@ -368,7 +380,8 @@
           "settings": {
             "collection": "",
             "title_override": "Fortified Collection",
-            "image": "shopify://shop_images/Seppelsfield-OCT24-0208.jpg",
+            "image": "shopify://shop_images/Seppelsfield-OCT24-0109.jpg",
+            "label_text": "",
             "eyebrow": "A defining tradition",
             "body": "<p>Rich, complex wines representing one of Seppeltsfield's most enduring areas of expertise and craftsmanship.</p>",
             "meta_tags": "Para Tawny, Aged releases, Cellar classics",
@@ -381,7 +394,8 @@
           "settings": {
             "collection": "",
             "title_override": "Gifting",
-            "image": "shopify://shop_images/Seppelsfield-OCT24-0145.jpg",
+            "image": "shopify://shop_images/ip-three-pack-may2025-1746507353996.png",
+            "label_text": "",
             "eyebrow": "The art of giving",
             "body": "<p>Curated wines, gift packs and vouchers presented with the elegance expected from the Seppeltsfield estate.</p>",
             "meta_tags": "Gift packs, Vouchers, Special occasions",
@@ -401,6 +415,7 @@
         "heading": "Wine presented through story, not a product grid.",
         "body": "The homepage leads visitors into the store through Seppeltsfield's most important collections. Prices, badges and Add to Cart buttons remain on collection and product templates.",
         "color_scheme": "ivory",
+        "grid_width": "full_bleed",
         "spacing_preset": "standard"
       }
     },
@@ -410,7 +425,7 @@
         "exp_1": {
           "type": "experience_card",
           "settings": {
-            "image": "shopify://shop_images/cellar-door-tasting.jpg",
+            "image": "shopify://shop_images/seppeltsfield27052020-95-1598841709273.jpg",
             "eyebrow": "Taste",
             "title": "Wine Tastings",
             "body": "Guided tastings from current releases to rare cellar experiences.",
@@ -432,7 +447,7 @@
         "exp_3": {
           "type": "experience_card",
           "settings": {
-            "image": "shopify://shop_images/finoHERO.jpg",
+            "image": "shopify://shop_images/Seppelsfield-OCT24-0225.jpg",
             "eyebrow": "Dine",
             "title": "FINO & Café Gardens",
             "body": "Seasonal dining and relaxed estate hospitality in the heart of Seppeltsfield.",
@@ -447,9 +462,12 @@
         "exp_3"
       ],
       "settings": {
+        "section_anchor_id": "",
         "eyebrow": "Experience Seppeltsfield",
         "heading": "Turn discovery into a visit.",
         "body": "Bookable experiences appear after the collection storytelling so commerce and visitation both receive clear, premium pathways.",
+        "card_style": "bordered",
+        "grid_layout": "equal",
         "color_scheme": "light",
         "spacing_preset": "standard"
       }
@@ -493,7 +511,7 @@
         "story_3": {
           "type": "story_card",
           "settings": {
-            "image": "shopify://shop_images/finoHERO.jpg",
+            "image": "shopify://shop_images/Z62_5420.jpg",
             "eyebrow": "Estate life",
             "title": "From the FINO kitchen",
             "body": "Food, producers and the changing seasons.",
