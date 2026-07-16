@@ -1,0 +1,245 @@
+{
+  "sections": {
+    "disc_hero": {
+      "type": "sf2-page-hero",
+      "settings": {
+        "hero_height": "editorial",
+        "background_image": "shopify://shop_images/vineyardsandcellarsHERO.jpg",
+        "mobile_image": "shopify://shop_images/vineyardsandcellarsHERO.jpg",
+        "eyebrow": "Discover Seppeltsfield",
+        "heading": "A living legacy in the heart of the Barossa.",
+        "body": "<p>Discover the history, estate, winemaking, awards and enduring custodianship behind one of Australia's most significant wine destinations.</p>",
+        "button_label": "Explore Our History",
+        "button_url": "/pages/history",
+        "button_link": "",
+        "button_preset": "primary_blue",
+        "secondary_button_label": "",
+        "secondary_button_url": "",
+        "show_side_note": true,
+        "note_heading": "More than 175 years in the making.",
+        "note_body": "A story shaped by family, architecture, innovation, place and an unbroken commitment to wine.",
+        "color_scheme": "dark",
+        "spacing_preset": "compact"
+      }
+    },
+    "disc_anchor": {
+      "type": "sf2-anchor-nav",
+      "blocks": {
+        "a1": { "type": "anchor_link", "settings": { "label": "History", "url": "/pages/history" } },
+        "a2": { "type": "anchor_link", "settings": { "label": "The Estate", "url": "/pages/the-estate" } },
+        "a3": { "type": "anchor_link", "settings": { "label": "Winemaking", "url": "/pages/winemaking" } },
+        "a4": { "type": "anchor_link", "settings": { "label": "Awards", "url": "/pages/awards-recognition" } },
+        "a5": { "type": "anchor_link", "settings": { "label": "Sustainability", "url": "/pages/sustainability" } }
+      },
+      "block_order": ["a1", "a2", "a3", "a4", "a5"],
+      "settings": {
+        "enable_sticky": false,
+        "color_scheme": "black"
+      }
+    },
+    "disc_intro": {
+      "type": "sf2-editorial-split",
+      "settings": {
+        "eyebrow": "The house of Seppeltsfield",
+        "heading": "Built on heritage. Defined by what comes next.",
+        "body": "<p>Discover should act as the main storytelling destination for the brand. It replaces a fragmented collection of About pages with one clear editorial journey, while still giving each major subject enough room to feel important.</p><p>The page introduces Seppeltsfield at a high level, then leads users into deeper dedicated templates. The links in this mockup already anticipate the Shopify routes we may need to build.</p>",
+        "link_label": "Begin the story",
+        "link_url": "/pages/history",
+        "main_image": "shopify://shop_images/Seppelsfield-OCT24-0004.jpg",
+        "secondary_image": "shopify://shop_images/1878-Centennial-Cellar.jpg",
+        "note_eyebrow": "Est. 1851",
+        "note_heading": "Seven generations of Barossa history.",
+        "color_scheme": "light",
+        "spacing_preset": "spacious"
+      }
+    },
+    "disc_chapters": {
+      "type": "sf2-chapter-grid",
+      "blocks": {
+        "c1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/vineyardsandcellarsHERO.jpg",
+            "number_label": "01",
+            "title": "History",
+            "body": "From the Seppelt family's arrival in 1851 to the estate's next chapter.",
+            "url": "/pages/history"
+          }
+        },
+        "c2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/SEPPELTSFIELD_Centennial_Cellar.jpg",
+            "number_label": "02",
+            "title": "The Estate",
+            "body": "Cellars, vineyards, gardens and architecture.",
+            "url": "/pages/the-estate"
+          }
+        },
+        "c3": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Seppelsfield-OCT24-0208.jpg",
+            "number_label": "03",
+            "title": "Winemaking",
+            "body": "Tradition, innovation and craftsmanship.",
+            "url": "/pages/winemaking"
+          }
+        },
+        "c4": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/provenance-of-para-HERO.jpg",
+            "number_label": "04 — 05",
+            "title": "Awards & Sustainability",
+            "body": "Recognition earned over generations, with a clear commitment to responsible custodianship.",
+            "url": "/pages/awards-recognition"
+          }
+        }
+      },
+      "block_order": ["c1", "c2", "c3", "c4"],
+      "settings": {
+        "eyebrow": "Explore the story",
+        "heading": "Five chapters. One remarkable estate.",
+        "body": "These are the five content pillars from the proposed Discover navigation. Each module can link to a deeper anchor, modal, article or dedicated subpage if needed.",
+        "color_scheme": "dark",
+        "spacing_preset": "spacious"
+      }
+    },
+    "disc_history": {
+      "type": "sf2-history-feature",
+      "blocks": {
+        "s1": { "type": "stat", "settings": { "value": "1851", "label": "Founded in the Barossa" } },
+        "s2": { "type": "stat", "settings": { "value": "1878", "label": "Centennial Cellar begins" } },
+        "s3": { "type": "stat", "settings": { "value": "175", "label": "Years of heritage" } }
+      },
+      "block_order": ["s1", "s2", "s3"],
+      "settings": {
+        "section_anchor_id": "history",
+        "image": "shopify://shop_images/1878-Centennial-Cellar.jpg",
+        "label_eyebrow": "Dedicated history page",
+        "label_heading": "The complete archive belongs on its own immersive template.",
+        "eyebrow": "175 years of Seppeltsfield",
+        "heading": "An Australian story shaped by time.",
+        "body": "<p>The Discover page provides the entry point, while the full History page can hold the detailed chronology, family generations, Centennial Cellar, archival photography, oral histories, architecture and the evolution of winemaking at the estate.</p>",
+        "link_label": "Explore the Full History",
+        "link_url": "/pages/history",
+        "color_scheme": "soft_blue",
+        "spacing_preset": "spacious"
+      }
+    },
+    "disc_estate": {
+      "type": "sf2-estate-navigator",
+      "blocks": {
+        "m1": { "type": "nav_card", "settings": { "image": "shopify://shop_images/Seppelsfield-OCT24-0004.jpg", "eyebrow": "Architecture", "icon": "", "title": "Historic buildings", "body": "", "url": "/pages/gardens-architecture" } },
+        "m2": { "type": "nav_card", "settings": { "image": "shopify://shop_images/vineyardsandcellarsHERO.jpg", "eyebrow": "Landscape", "icon": "", "title": "Vineyards", "body": "", "url": "/pages/vineyards-cellars" } },
+        "m3": { "type": "nav_card", "settings": { "image": "shopify://shop_images/SEPPELTSFIELD_Centennial_Cellar.jpg", "eyebrow": "Cellars", "icon": "", "title": "Gravity-flow heritage", "body": "", "url": "/pages/vineyards-cellars" } },
+        "m4": { "type": "nav_card", "settings": { "image": "shopify://shop_images/finoHERO.jpg", "eyebrow": "Gardens", "icon": "", "title": "Estate grounds", "body": "", "url": "/pages/gardens-architecture" } }
+      },
+      "block_order": ["m1", "m2", "m3", "m4"],
+      "settings": {
+        "section_anchor_id": "estate",
+        "eyebrow": "The estate",
+        "heading": "Architecture, landscape and living craftsmanship.",
+        "body": "The Estate section consolidates the current vineyard, cellar, garden and architecture content into one visual overview without losing the individual stories.",
+        "link_label": "Explore the Estate",
+        "link_url": "/pages/the-estate",
+        "color_scheme": "light",
+        "spacing_preset": "spacious"
+      }
+    },
+    "disc_winemaking": {
+      "type": "sf2-video-feature",
+      "blocks": {
+        "p1": { "type": "principle", "settings": { "label": "Respect for place" } },
+        "p2": { "type": "principle", "settings": { "label": "Patience in the cellar" } },
+        "p3": { "type": "principle", "settings": { "label": "Craft passed through generations" } },
+        "p4": { "type": "principle", "settings": { "label": "Innovation with purpose" } }
+      },
+      "block_order": ["p1", "p2", "p3", "p4"],
+      "settings": {
+        "section_anchor_id": "winemaking",
+        "eyebrow": "Our winemaking",
+        "heading": "Tradition refined through every vintage.",
+        "body": "<p>This section introduces the winemaking philosophy, vineyards, cellar practices and the role of the Centennial Collection. It should feel authoritative but accessible, with video or scroll-triggered imagery adding depth.</p>",
+        "youtube_url": "",
+        "poster_image": "shopify://shop_images/cellar-door-tasting.jpg",
+        "play_label": "Play winemaking film",
+        "video_position": "left",
+        "frame_style": "tall",
+        "link_label": "Discover Our Winemaking",
+        "link_url": "/pages/winemaking",
+        "color_scheme": "dark",
+        "spacing_preset": "spacious"
+      }
+    },
+    "disc_awards": {
+      "type": "sf2-awards-list",
+      "blocks": {
+        "aw1": { "type": "award", "settings": { "year_label": "2026", "title": "Major estate recognition or award title", "url": "/pages/awards-recognition" } },
+        "aw2": { "type": "award", "settings": { "year_label": "2025", "title": "Centennial Collection accolade", "url": "/pages/awards-recognition" } },
+        "aw3": { "type": "award", "settings": { "year_label": "2024", "title": "Winemaking or heritage recognition", "url": "/pages/awards-recognition" } },
+        "aw4": { "type": "award", "settings": { "year_label": "Archive", "title": "Explore the complete awards history", "url": "/pages/awards-recognition" } }
+      },
+      "block_order": ["aw1", "aw2", "aw3", "aw4"],
+      "settings": {
+        "section_anchor_id": "recognition",
+        "eyebrow": "Awards & recognition",
+        "heading": "A legacy recognised around the world.",
+        "body": "Rather than displaying every award as a logo wall, this section highlights major milestones and links to the complete awards archive.",
+        "link_label": "View all recognition",
+        "link_url": "/pages/awards-recognition",
+        "color_scheme": "light",
+        "spacing_preset": "spacious"
+      }
+    },
+    "disc_sustainability": {
+      "type": "sf2-benefit-grid",
+      "blocks": {
+        "b1": { "type": "benefit", "settings": { "icon": "vineyard-stewardship", "title": "Vineyard stewardship", "body": "" } },
+        "b2": { "type": "benefit", "settings": { "icon": "biodiversity", "title": "Biodiversity", "body": "" } },
+        "b3": { "type": "benefit", "settings": { "icon": "energy", "title": "Energy and resources", "body": "" } },
+        "b4": { "type": "benefit", "settings": { "icon": "custodianship", "title": "Long-term custodianship", "body": "" } }
+      },
+      "block_order": ["b1", "b2", "b3", "b4"],
+      "settings": {
+        "section_anchor_id": "sustainability",
+        "eyebrow": "Sustainability",
+        "eyebrow_brand": true,
+        "heading": "Custodianship for the generations ahead.",
+        "body": "Sustainability should sit within the Discover narrative as a continuation of the estate's history, not as a separate corporate statement. This section introduces the major commitments and links to detailed reporting.",
+        "link_label": "Explore Our Commitments",
+        "link_url": "/pages/sustainability",
+        "show_login_link": false,
+        "show_decorative_circle": true,
+        "color_scheme": "black",
+        "spacing_preset": "spacious"
+      }
+    },
+    "disc_cta": {
+      "type": "sf2-cta-banner",
+      "settings": {
+        "eyebrow": "Continue exploring",
+        "heading": "Experience the story in person.",
+        "body": "Move naturally from discovery into tastings, tours, dining and the wider Seppeltsfield estate experience.",
+        "button_label": "Plan Your Visit",
+        "button_url": "/pages/visit",
+        "button_preset": "primary_dark",
+        "color_scheme": "brand_blue",
+        "spacing_preset": "compact"
+      }
+    }
+  },
+  "order": [
+    "disc_hero",
+    "disc_anchor",
+    "disc_intro",
+    "disc_chapters",
+    "disc_history",
+    "disc_estate",
+    "disc_winemaking",
+    "disc_awards",
+    "disc_sustainability",
+    "disc_cta"
+  ]
+}
