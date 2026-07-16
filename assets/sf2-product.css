@@ -1,11 +1,11 @@
-/* Commerce header on product templates */
+/* Commerce header on product templates — solid black from first paint */
 .template-product .sf2-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #fff;
-  color: var(--sf-black);
-  border-bottom: 1px solid var(--sf-border);
+  background-color: #000000;
+  color: #fff;
+  border-bottom: 0;
 }
 .template-product .sf2-header .sf2-header__logo img {
   filter: none;
@@ -15,9 +15,9 @@
   color: var(--sf-blue);
 }
 .template-product .sf2-header .sf2-header__round {
-  border-color: var(--sf-border);
+  border-color: rgba(255, 255, 255, 0.38);
   color: inherit;
-  background: #fff;
+  background: transparent;
 }
 
 .sf2-breadcrumbs {

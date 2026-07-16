@@ -14,8 +14,10 @@
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.sf2-header.is-scrolled {
-  background-color: var(--sf-coal-deep);
+.sf2-header.is-scrolled,
+.sf2-header[data-transparency="always_solid"],
+.sf2-header[data-commerce-solid="true"] {
+  background-color: #000000;
 }
 
 .sf2-header__nav { height: 92px; display: grid; grid-template-columns: 240px 1fr auto; align-items: center; gap: 25px; }

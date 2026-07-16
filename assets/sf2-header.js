@@ -1,12 +1,12 @@
-(function () {
+function initHeaderScrollState() {
   const header = document.querySelector('[data-sf2-header]');
   const headerGroup = document.querySelector('#header-group');
   if (!header) return;
 
-  const SCROLL_THRESHOLD = 32;
   const mode = header.dataset.transparency;
-  const heroHeader = header.dataset.heroHeader === 'true';
   const commerceSolid = header.dataset.commerceSolid === 'true';
+  const alwaysSolid = mode === 'always_solid' || commerceSolid;
+  const alwaysTransparent = mode === 'always_transparent';
 
   function setHeaderMetrics() {
     const nav = header.querySelector('.sf2-header__nav');
@@ -18,32 +18,29 @@
   }
 
   function updateHeaderState() {
-    if (mode === 'always_solid' || commerceSolid) {
+    if (alwaysSolid) {
       header.classList.add('is-scrolled');
-      headerGroup?.classList.remove('has-scrolled-header');
+      headerGroup?.classList.toggle('has-scrolled-header', window.scrollY > 0);
       return;
     }
 
-    if (mode === 'always_transparent') {
+    if (alwaysTransparent) {
       header.classList.remove('is-scrolled');
       headerGroup?.classList.remove('has-scrolled-header');
       return;
     }
 
-    if (!heroHeader) {
+    if (window.scrollY > 0) {
+      header.classList.add('is-scrolled');
+    } else {
       header.classList.remove('is-scrolled');
-      headerGroup?.classList.remove('has-scrolled-header');
-      return;
     }
 
-    const scrolled = window.scrollY > SCROLL_THRESHOLD;
-    header.classList.toggle('is-scrolled', scrolled);
-    headerGroup?.classList.toggle('has-scrolled-header', scrolled);
+    headerGroup?.classList.toggle('has-scrolled-header', window.scrollY > 0);
   }
 
   setHeaderMetrics();
   updateHeaderState();
-
   window.addEventListener('scroll', updateHeaderState, { passive: true });
   window.addEventListener('resize', function () {
     setHeaderMetrics();
@@ -53,7 +50,9 @@
     setHeaderMetrics();
     updateHeaderState();
   });
+}
 
+function initHeaderDrawer() {
   const drawer = document.querySelector('[data-sf2-drawer]');
   const openBtns = document.querySelectorAll('[data-sf2-menu-open]');
   const closeBtns = document.querySelectorAll('[data-sf2-menu-close]');
@@ -90,4 +89,9 @@
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') closeDrawer();
   });
-})();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  initHeaderScrollState();
+  initHeaderDrawer();
+});

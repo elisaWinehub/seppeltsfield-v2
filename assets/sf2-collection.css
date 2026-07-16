@@ -1,12 +1,12 @@
-/* Commerce header on collection templates (light banner, no hero) */
+/* Commerce header on collection templates — solid black from first paint */
 .template-collection .sf2-header,
 .template-search .sf2-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #fff;
-  color: var(--sf-black);
-  border-bottom: 1px solid var(--sf-border);
+  background-color: #000000;
+  color: #fff;
+  border-bottom: 0;
 }
 .template-collection .sf2-header .sf2-header__logo img,
 .template-search .sf2-header .sf2-header__logo img {
@@ -19,9 +19,9 @@
 }
 .template-collection .sf2-header .sf2-header__round,
 .template-search .sf2-header .sf2-header__round {
-  border-color: var(--sf-border);
+  border-color: rgba(255, 255, 255, 0.38);
   color: inherit;
-  background: #fff;
+  background: transparent;
 }
 
 .sf2-col-banner { border-bottom: 1px solid var(--sf-border); }
