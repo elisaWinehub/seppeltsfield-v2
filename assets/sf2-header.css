@@ -1,12 +1,20 @@
+.page-wrapper {
+  position: relative;
+}
+
 #header-group {
-  position: sticky;
+  position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 50;
   background-color: transparent;
   transition: background-color 0.25s ease;
 }
 
 #header-group.is-scrolled {
+  position: fixed;
   background-color: #000000;
 }
 
@@ -30,6 +38,17 @@
 .sf2-header__links a:hover,
 .sf2-header__links a:focus-visible { color: var(--sf-blue); opacity: 1; }
 .sf2-header__actions { display: flex; align-items: center; gap: 10px; }
+.sf2-header__actions .sf2-btn--light {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+.sf2-header__actions .sf2-btn--light:hover,
+.sf2-header__actions .sf2-btn--light:focus-visible {
+  background-color: var(--sf-blue);
+  color: #000000;
+  border-color: var(--sf-blue);
+}
 .sf2-header__round { width: 38px; height: 38px; border: 1px solid rgba(255,255,255,0.38); border-radius: 50%; background: transparent; color: #fff; display: grid; place-items: center; padding: 0; cursor: pointer; }
 .sf2-header__round .sf2-icon { width: 17px; height: 17px; }
 .sf2-header__menu-btn { display: none; }
@@ -42,10 +61,10 @@
 .sf2-header__drawer-nav { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 16px; background-color: transparent; }
 .sf2-header__drawer-nav a { color: inherit; text-decoration: none; font-size: 1rem; }
 
-/* Overlay header-group on hero sections */
+/* Overlay header-group on hero sections — absolute header sits out of flow */
 .template-index #MainContent > .shopify-section:first-child,
 .template-page #MainContent > .shopify-section:first-child {
-  margin-top: calc(-1 * var(--sf2-header-group-height, 120px));
+  margin-top: 0;
 }
 
 /* Commerce templates — solid black header-group from first paint */
