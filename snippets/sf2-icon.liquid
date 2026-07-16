@@ -1,0 +1,36 @@
+{%- doc -%}
+  @param {string} icon - search | account | cart | arrow-right | crown | heritage | collection | destination | clock | map-pin | calendar
+  @param {string} [class]
+{%- enddoc -%}
+{%- liquid
+  assign icon_class = 'sf2-icon'
+  if class != blank
+    assign icon_class = icon_class | append: ' ' | append: class
+  endif
+-%}
+<span class="{{ icon_class }}" aria-hidden="true">
+  {%- case icon -%}
+    {%- when 'search' -%}
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4"/></svg>
+    {%- when 'account' -%}
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3"/><path d="M5 20c.8-4 3.2-6 7-6s6.2 2 7 6"/></svg>
+    {%- when 'cart' -%}
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h2l2 10h9l2-7H7"/><circle cx="10" cy="19" r="1"/><circle cx="17" cy="19" r="1"/></svg>
+    {%- when 'arrow-right' -%}
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M14 7l5 5-5 5"/></svg>
+    {%- when 'crown' -%}
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 8l4 3 4-6 4 6 4-3-2 10H6L4 8Z"/><path d="M7 18h10"/></svg>
+    {%- when 'heritage' -%}
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 15l9 7 6-13 6 13 9-7-5 22H14L9 15Z"/><path d="M16 37h16M19 42h10"/></svg>
+    {%- when 'collection' -%}
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7h22v9c0 10-4 18-11 25-7-7-11-15-11-25V7Z"/><path d="M18 12h12M18 18h12M20 25h8"/></svg>
+    {%- when 'destination' -%}
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 36h34M11 36V20l13-9 13 9v16"/><path d="M18 36V25h12v11M8 20h32"/></svg>
+    {%- when 'clock' -%}
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>
+    {%- when 'map-pin' -%}
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z"/><circle cx="12" cy="10" r="2"/></svg>
+    {%- when 'calendar' -%}
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="6" width="14" height="13" rx="1"/><path d="M8 4v4M16 4v4M5 10h14"/></svg>
+  {%- endcase -%}
+</span>
