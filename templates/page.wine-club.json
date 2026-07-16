@@ -1,0 +1,198 @@
+{
+  "sections": {
+    "wc_hero": {
+      "type": "sf2-page-hero",
+      "settings": {
+        "hero_height": "editorial",
+        "background_image": "shopify://shop_images/SEPPELTSFIELD_Centennial_Cellar.jpg",
+        "mobile_image": "shopify://shop_images/SEPPELTSFIELD_Centennial_Cellar.jpg",
+        "eyebrow": "The Crown Society",
+        "heading": "Membership shaped around your taste.",
+        "body": "<p>Choose your wines, enjoy year-round privileges and become part of the ongoing story of Seppeltsfield.</p>",
+        "button_label": "Explore Membership",
+        "button_url": "",
+        "button_link": "#membership",
+        "button_preset": "primary_blue",
+        "secondary_button_label": "",
+        "secondary_button_url": "",
+        "show_side_note": true,
+        "note_heading": "Flexible, personal and distinctly Seppeltsfield.",
+        "note_body": "Membership includes preferred pricing, curated deliveries, member experiences and access across the estate.",
+        "color_scheme": "dark",
+        "spacing_preset": "compact"
+      }
+    },
+    "wc_intro": {
+      "type": "sf2-editorial-split",
+      "settings": {
+        "eyebrow": "Join the Crown Society",
+        "heading": "A wine club built around choice.",
+        "body": "<p>Members choose from carefully curated wine packs and receive preferred pricing, convenient delivery and access to exclusive events and estate experiences.</p><p>The redesign elevates the club from a long informational page into a premium membership journey with clear tiers, visual benefits and stronger conversion points.</p>",
+        "link_label": "",
+        "link_url": "",
+        "main_image": "shopify://shop_images/Seppelsfield-OCT24-0004.jpg",
+        "secondary_image": "shopify://shop_images/cellar-door-tasting.jpg",
+        "note_eyebrow": "Member privileges",
+        "note_heading": "Wine, experiences and estate access.",
+        "color_scheme": "light",
+        "spacing_preset": "spacious"
+      }
+    },
+    "wc_video": {
+      "type": "sf2-video-feature",
+      "settings": {
+        "eyebrow": "Inside the Crown Society",
+        "heading": "See what membership feels like.",
+        "body": "<p>This section is reserved for the existing YouTube video. In Shopify, it can become a configurable video section with YouTube URL, poster image, heading, text and optional autoplay settings.</p>",
+        "youtube_url": "",
+        "poster_image": "shopify://shop_images/vineyardsandcellarsHERO.jpg",
+        "play_label": "Play Crown Society video",
+        "color_scheme": "dark",
+        "spacing_preset": "spacious"
+      }
+    },
+    "wc_tiers": {
+      "type": "sf2-wine-club-tiers",
+      "blocks": {
+        "tier_1": {
+          "type": "tier",
+          "settings": {
+            "image": "shopify://shop_images/Seppelsfield-OCT24-0004.jpg",
+            "eyebrow": "Bright and fresh",
+            "title": "Whites & Lights",
+            "body": "<p>For members who enjoy white, sparkling and lighter-style wines across the Seppeltsfield portfolio.</p>",
+            "feature_1": "Curated mixed selection",
+            "feature_2": "Preferred member pricing",
+            "feature_3": "Flexible annual delivery",
+            "button_label": "Choose This Selection",
+            "button_url": "/pages/wine-club-membership"
+          }
+        },
+        "tier_2": {
+          "type": "tier",
+          "settings": {
+            "image": "shopify://shop_images/Seppelsfield-OCT24-0208.jpg",
+            "eyebrow": "Rich and structured",
+            "title": "Reds Selection",
+            "body": "<p>A curated mix of red wines selected for members who favour depth, texture and classic Barossa character.</p>",
+            "feature_1": "Curated red wine pack",
+            "feature_2": "Preferred member pricing",
+            "feature_3": "Flexible annual delivery",
+            "button_label": "Choose This Selection",
+            "button_url": "/pages/wine-club-membership"
+          }
+        },
+        "tier_3": {
+          "type": "tier",
+          "settings": {
+            "image": "shopify://shop_images/provenance-of-para-HERO.jpg",
+            "eyebrow": "Versatile and varied",
+            "title": "All Occasions",
+            "body": "<p>A balanced mixed selection for members who enjoy discovering a broad range of Seppeltsfield wines.</p>",
+            "feature_1": "Mixed wine selection",
+            "feature_2": "Preferred member pricing",
+            "feature_3": "Flexible annual delivery",
+            "button_label": "Choose This Selection",
+            "button_url": "/pages/wine-club-membership"
+          }
+        }
+      },
+      "block_order": ["tier_1", "tier_2", "tier_3"],
+      "settings": {
+        "section_anchor_id": "membership",
+        "eyebrow": "Choose your selection",
+        "heading": "Three ways to join.",
+        "body": "Each tier can later be powered by a product, subscription app, club plan or custom membership flow in Shopify.",
+        "color_scheme": "ivory",
+        "spacing_preset": "spacious"
+      }
+    },
+    "wc_how": {
+      "type": "sf2-how-it-works",
+      "blocks": {
+        "step_1": { "type": "step", "settings": { "title": "Choose your wine selection", "body": "Select the mix that best suits your taste and the way you enjoy wine." } },
+        "step_2": { "type": "step", "settings": { "title": "Receive your deliveries", "body": "Your wines are prepared and delivered according to the membership schedule." } },
+        "step_3": { "type": "step", "settings": { "title": "Enjoy member privileges", "body": "Access preferred pricing, exclusive releases, events and estate experiences throughout the year." } }
+      },
+      "block_order": ["step_1", "step_2", "step_3"],
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "Simple to join. Easy to enjoy.",
+        "color_scheme": "soft_blue",
+        "spacing_preset": "spacious"
+      }
+    },
+    "wc_benefits": {
+      "type": "sf2-benefit-grid",
+      "blocks": {
+        "b1": { "type": "benefit", "settings": { "icon": "member-pricing", "title": "Member pricing", "body": "Preferred pricing across selected Seppeltsfield wines and releases." } },
+        "b2": { "type": "benefit", "settings": { "icon": "delivery", "title": "Convenient delivery", "body": "Curated wine deliveries prepared and sent according to your membership." } },
+        "b3": { "type": "benefit", "settings": { "icon": "exclusive", "title": "Exclusive releases", "body": "Priority access to selected wines, limited releases and member-only offers." } },
+        "b4": { "type": "benefit", "settings": { "icon": "estate-access", "title": "Estate experiences", "body": "Access to special tastings, events and privileges across the estate." } }
+      },
+      "block_order": ["b1", "b2", "b3", "b4"],
+      "settings": {
+        "eyebrow": "Wine club benefits",
+        "heading": "Membership beyond the bottle.",
+        "body": "Benefits should be easy to scan and visually separated instead of being buried in a long paragraph.",
+        "show_login_link": true,
+        "login_label": "Member Login",
+        "color_scheme": "light",
+        "spacing_preset": "spacious"
+      }
+    },
+    "wc_experiences": {
+      "type": "sf2-experience-grid",
+      "blocks": {
+        "e1": { "type": "experience_card", "settings": { "image": "shopify://shop_images/cellar-door-tasting.jpg", "eyebrow": "Taste", "title": "Private tastings", "body": "Member moments centred on wine, heritage and the estate.", "link_label": "", "url": "/pages/wine-club-experiences" } },
+        "e2": { "type": "experience_card", "settings": { "image": "shopify://shop_images/finoHERO.jpg", "eyebrow": "Dine", "title": "Estate dining", "body": "Special dining opportunities and seasonal member events.", "link_label": "", "url": "/pages/wine-club-experiences" } },
+        "e3": { "type": "experience_card", "settings": { "image": "shopify://shop_images/Seppeltsfield_Wide_Estate_-_Dragan_Fine_Art_Photography.jpg", "eyebrow": "Gather", "title": "Exclusive events", "body": "Invitations to experiences throughout the Seppeltsfield calendar.", "link_label": "", "url": "/pages/wine-club-experiences" } }
+      },
+      "block_order": ["e1", "e2", "e3"],
+      "settings": {
+        "eyebrow": "Member experiences",
+        "heading": "Closer to the estate.",
+        "body": "Use editorial imagery to make membership feel experiential, not transactional.",
+        "card_style": "overlay",
+        "grid_layout": "featured_first",
+        "color_scheme": "dark",
+        "spacing_preset": "spacious"
+      }
+    },
+    "wc_commitment": {
+      "type": "sf2-text-columns",
+      "settings": {
+        "eyebrow": "Our shared commitment",
+        "heading": "A membership with a personal relationship.",
+        "body": "<p>By joining the Crown Society, members commit to purchasing their selected wine allocation each year.</p><p>In return, Seppeltsfield provides ongoing access to wines, member benefits, events and estate experiences.</p><p>The page should clearly communicate flexibility, support and the ability to manage membership through the customer account portal.</p><p>Terms, delivery details and cancellation conditions can live in expandable content or a dedicated policy page.</p>",
+        "column_count": "2",
+        "color_scheme": "light",
+        "spacing_preset": "standard"
+      }
+    },
+    "wc_cta": {
+      "type": "sf2-cta-banner",
+      "settings": {
+        "eyebrow": "Become a member",
+        "heading": "Choose your Crown Society selection.",
+        "body": "Join online, select your wines and begin enjoying member privileges across Seppeltsfield.",
+        "button_label": "Join the Crown Society",
+        "button_url": "/pages/wine-club-membership",
+        "button_preset": "primary_dark",
+        "color_scheme": "brand_blue",
+        "spacing_preset": "compact"
+      }
+    }
+  },
+  "order": [
+    "wc_hero",
+    "wc_intro",
+    "wc_video",
+    "wc_tiers",
+    "wc_how",
+    "wc_benefits",
+    "wc_experiences",
+    "wc_commitment",
+    "wc_cta"
+  ]
+}
