@@ -20,6 +20,10 @@ function initHeaderScrollState() {
   const alwaysSolid = mode === 'always_solid' || commerceSolid;
   const alwaysTransparent = mode === 'always_transparent';
 
+  if (commerceSolid) {
+    headerGroup.classList.add('sf2-header-group--in-flow');
+  }
+
   function setHeaderMetrics() {
     const nav = header.querySelector('.sf2-header__nav');
     const navHeight = nav ? nav.offsetHeight : 92;

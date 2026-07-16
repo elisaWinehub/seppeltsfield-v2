@@ -78,17 +78,31 @@
 }
 
 /* Commerce templates — header in document flow, solid black from first paint */
+#header-group.sf2-header-group--in-flow,
+body:has(#MainContent[data-template='product']) #header-group,
+body:has(#MainContent[data-template='collection']) #header-group,
+body:has(#MainContent[data-template='search']) #header-group,
 .template-collection #header-group,
 .template-search #header-group,
 .template-product #header-group {
   position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
   background-color: #000000;
 }
 
+#header-group.sf2-header-group--in-flow.is-scrolled,
+body:has(#MainContent[data-template='product']) #header-group.is-scrolled,
+body:has(#MainContent[data-template='collection']) #header-group.is-scrolled,
+body:has(#MainContent[data-template='search']) #header-group.is-scrolled,
 .template-collection #header-group.is-scrolled,
 .template-search #header-group.is-scrolled,
 .template-product #header-group.is-scrolled {
   position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
   background-color: #000000;
 }
 
