@@ -1,0 +1,27 @@
+{% render 'sf2-fonts' %}
+{{ 'sf2-tokens.css' | asset_url | stylesheet_tag }}
+{{ 'sf2-components.css' | asset_url | stylesheet_tag }}
+{{ 'sf2-header.css' | asset_url | stylesheet_tag }}
+
+<section class="sf2-utility"{% if section.settings.link_url != blank %} data-link="{{ section.settings.link_url }}"{% endif %}>
+  <div class="sf2-utility__inner">
+    {%- if section.settings.link_url != blank -%}
+      <a href="{{ section.settings.link_url }}">{{ section.settings.text }}</a>
+    {%- else -%}
+      <span>{{ section.settings.text }}</span>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "SF2 Announcement",
+  "tag": "section",
+  "class": "sf2-announcement-bar",
+  "settings": [
+    { "type": "text", "id": "text", "label": "Text", "default": "WELCOME TO SEPPELTSFIELD · BAROSSA VALLEY · ESTABLISHED 1851" },
+    { "type": "url", "id": "link_url", "label": "Link" }
+  ],
+  "presets": [{ "name": "SF2 Announcement" }]
+}
+{% endschema %}
