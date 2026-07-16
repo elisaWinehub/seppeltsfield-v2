@@ -223,16 +223,85 @@
 .sf2-benefits--dark .sf2-benefits__card p { color: rgba(255,255,255,.58); }
 .sf2-benefits--dark .sf2-benefits__card h3 { color: #fff; }
 
+.sf2-benefits__card-link { display: block; margin-top: 5px; font-size: .76rem; color: #626970; text-decoration: none; }
+.sf2-benefits__card-link:hover, .sf2-benefits__card-link:focus-visible { color: var(--sf-blue); }
+.sf2-benefits--dark .sf2-benefits__card-link { color: rgba(255,255,255,.58); }
+.sf2-benefits__card { min-height: 180px; }
+.sf2-benefits__grid--contact .sf2-benefits__card { min-height: 220px; }
+.sf2-benefits__grid--contact { grid-template-columns: .78fr 1.22fr; }
+
+.sf2-location__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
+.sf2-location__map { min-height: 620px; position: relative; overflow: hidden; background: linear-gradient(rgba(12,167,224,.1),rgba(12,167,224,.1)); }
+.sf2-location__map .sf2-picture__img { min-height: 620px; }
+.sf2-location__card { position: absolute; left: 28px; bottom: 28px; z-index: 2; background: #fff; padding: 24px; width: 280px; border-left: 4px solid var(--sf-blue); }
+.sf2-location__card strong { display: block; font-family: var(--sf-font-serif); font-size: 1.45rem; font-weight: 400; line-height: 1.05; margin-bottom: 8px; color: var(--sf-black); }
+.sf2-location__card span { font-size: .76rem; color: #626970; }
+.sf2-location__copy { background: var(--sf-black); color: #fff; padding: 54px; }
+.sf2-location__copy h2 { font-size: clamp(3.4rem,5.3vw,5.8rem); margin: 14px 0 24px; }
+.sf2-location__copy > p { color: rgba(255,255,255,.62); }
+.sf2-location__list { margin-top: 30px; border-top: 1px solid rgba(255,255,255,.14); }
+.sf2-location__item { display: grid; grid-template-columns: 34px 1fr; gap: 14px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+.sf2-location__item .sf2-icon { width: 24px; height: 24px; color: var(--sf-blue); }
+.sf2-location__item b { display: block; font-family: var(--sf-font-serif); font-size: 1.2rem; font-weight: 400; }
+.sf2-location__item span, .sf2-location__item a { font-size: .73rem; color: rgba(255,255,255,.58); text-decoration: none; }
+.sf2-location__item a:hover, .sf2-location__item a:focus-visible { color: var(--sf-brand-soft); }
+.sf2-location__link { margin-top: 28px; }
+
+.sf2-team__grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+.sf2-team__card { background: #fff; border: 1px solid var(--sf-border); }
+.sf2-team__media { height: 320px; background: #eceeed; overflow: hidden; }
+.sf2-team__copy { padding: 22px; }
+.sf2-team__copy h3 { font-family: var(--sf-font-serif); font-size: 1.45rem; font-weight: 400; margin: 8px 0 6px; }
+.sf2-team__copy p { font-size: .73rem; color: #666e73; margin: 0; }
+.sf2-team__link { display: inline-block; margin-top: 12px; font-size: .7rem; color: #087aa6; text-decoration: none; text-transform: uppercase; letter-spacing: .06em; }
+.sf2-team__link:hover, .sf2-team__link:focus-visible { text-decoration: underline; }
+
+.sf2-trade__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.sf2-trade__card { padding: 42px; min-height: 360px; display: flex; flex-direction: column; justify-content: space-between; }
+.sf2-trade__card--dark { background: var(--sf-coal); color: #fff; }
+.sf2-trade__card--dark p { max-width: 510px; color: rgba(255,255,255,.62); }
+.sf2-trade__card--soft_blue { background: var(--sf-light-blue); color: var(--sf-black); }
+.sf2-trade__card--soft_blue p { max-width: 510px; color: #626970; }
+.sf2-trade__card h2 { font-size: clamp(2.8rem,4.6vw,4.8rem); margin: 14px 0 22px; }
+
+.sf2-enquiry__grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 70px; align-items: start; }
+.sf2-enquiry__copy h2 { font-size: clamp(3.4rem,5.4vw,5.8rem); margin: 14px 0 24px; }
+.sf2-enquiry__copy p { color: #626970; }
+.sf2-enquiry__form { background: #fff; border: 1px solid var(--sf-border); padding: 34px; }
+.sf2-enquiry__fields { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+.sf2-enquiry__field { margin: 0; }
+.sf2-enquiry__field--full { grid-column: 1 / -1; }
+.sf2-enquiry__field label { display: block; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; font-weight: 600; }
+.sf2-enquiry__field input, .sf2-enquiry__field select, .sf2-enquiry__field textarea { width: 100%; border: 1px solid var(--sf-border); background: #fff; padding: 13px 14px; font: inherit; color: inherit; }
+.sf2-enquiry__field textarea { min-height: 150px; resize: vertical; }
+.sf2-enquiry__field input:focus, .sf2-enquiry__field select:focus, .sf2-enquiry__field textarea:focus { border-color: var(--sf-blue); outline: none; }
+.sf2-enquiry__success, .sf2-enquiry__error { padding: 16px 18px; margin-bottom: 18px; font-size: .85rem; }
+.sf2-enquiry__success { background: #edf7fb; border: 1px solid rgba(12,167,224,.35); color: #0d4f68; }
+.sf2-enquiry__error { background: #fff5f5; border: 1px solid rgba(180,40,40,.25); color: #8b1a1a; }
+
+.sf2-faq__grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 70px; align-items: start; }
+.sf2-faq__intro h2 { font-size: clamp(3.3rem,5.2vw,5.6rem); margin: 14px 0 0; }
+.sf2-faq__list { border-top: 1px solid var(--sf-border); }
+.sf2-accordion { border-bottom: 1px solid var(--sf-border); }
+.sf2-accordion__trigger { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 20px 0; border: 0; background: transparent; text-align: left; font-size: .76rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: inherit; cursor: pointer; }
+.sf2-accordion__trigger .sf2-icon { width: 18px; height: 18px; flex-shrink: 0; transition: transform .2s ease; }
+.sf2-accordion.is-open .sf2-accordion__trigger .sf2-icon { transform: rotate(45deg); }
+.sf2-accordion__trigger:focus-visible { outline: 2px solid var(--sf-blue); outline-offset: 4px; }
+.sf2-accordion__content { padding: 0 0 20px; color: #626970; font-size: .8rem; }
+.sf2-accordion__content p { margin-top: 0; }
+
 @media (max-width: 1000px) {
   .sf2-page-hero__content { grid-template-columns: 1fr; }
   .sf2-page-hero__side { display: none; }
   .sf2-split__grid, .sf2-dining__grid, .sf2-feature__grid, .sf2-events__grid, .sf2-plan__grid, .sf2-navigator__grid { grid-template-columns: 1fr; }
-  .sf2-video__grid, .sf2-how__grid, .sf2-benefits__grid, .sf2-columns__grid, .sf2-history__grid, .sf2-awards__grid { grid-template-columns: 1fr; }
+  .sf2-video__grid, .sf2-how__grid, .sf2-benefits__grid, .sf2-columns__grid, .sf2-history__grid, .sf2-awards__grid, .sf2-location__grid, .sf2-enquiry__grid, .sf2-faq__grid { grid-template-columns: 1fr; }
+  .sf2-benefits__grid--contact { grid-template-columns: 1fr; }
   .sf2-video--left .sf2-video__copy, .sf2-video--left .sf2-video__frame { order: unset; }
   .sf2-chapters__grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
   .sf2-chapters__card--tall { grid-row: auto; }
   .sf2-chapters__card--wide { grid-column: 1 / -1; }
   .sf2-chapters__card { min-height: 430px; }
+  .sf2-team__grid { grid-template-columns: 1fr 1fr; }
   .sf2-experience--overlay .sf2-experience__grid { grid-template-columns: 1fr 1fr; }
   .sf2-experience--overlay.sf2-experience--featured-first .sf2-experience__grid { grid-template-columns: 1fr 1fr; }
   .sf2-experience--featured-first .sf2-experience__card:first-child { grid-column: 1 / -1; }
@@ -253,13 +322,17 @@
   .sf2-video--tall .sf2-video__frame { min-height: 520px; }
   .sf2-chapters__grid { grid-template-columns: 1fr; }
   .sf2-chapters__card--wide { grid-column: auto; }
+  .sf2-chapters__card { min-height: 430px; }
+  .sf2-location__map { min-height: 480px; }
+  .sf2-location__map .sf2-picture__img { min-height: 480px; }
+  .sf2-location__copy, .sf2-trade__card, .sf2-enquiry__form { padding: 32px; }
   .sf2-history__media { height: 520px; }
   .sf2-history__media .sf2-picture__img { min-height: 520px; }
   .sf2-history__stats { grid-template-columns: 1fr; }
   .sf2-history__stat + .sf2-history__stat { border-left: 0; border-top: 1px solid var(--sf-border); padding-left: 0; }
   .sf2-awards__row { grid-template-columns: 80px 1fr; }
   .sf2-awards__row .sf2-icon { display: none; }
-  .sf2-experience--overlay .sf2-experience__grid, .sf2-experience--overlay.sf2-experience--featured-first .sf2-experience__grid, .sf2-village__grid, .sf2-itinerary__grid, .sf2-tiers__grid, .sf2-benefits__list { grid-template-columns: 1fr; }
+  .sf2-experience--overlay .sf2-experience__grid, .sf2-experience--overlay.sf2-experience--featured-first .sf2-experience__grid, .sf2-village__grid, .sf2-itinerary__grid, .sf2-tiers__grid, .sf2-benefits__list, .sf2-team__grid, .sf2-trade__grid, .sf2-enquiry__fields { grid-template-columns: 1fr; }
   .sf2-experience--overlay .sf2-experience__card { min-height: 430px; }
   .sf2-experience--featured-first .sf2-experience__card:first-child { grid-column: auto; }
   .sf2-columns__body--2 { columns: 1; }
