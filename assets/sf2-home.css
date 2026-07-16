@@ -103,7 +103,8 @@
 .sf2-collection--contained .sf2-collection__media .sf2-picture__img { min-height: 720px; }
 .sf2-collection--contained .sf2-collection__media::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,.48)); pointer-events: none; }
 .sf2-experience__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-.sf2-experience__card { background: #fff; border: 1px solid var(--sf-border); color: inherit; text-decoration: none; display: block; }
+.sf2-experience__grid > .sf2-experience__card { border: 0; }
+.sf2-experience__card { background: #fff; color: inherit; text-decoration: none; display: block; }
 .sf2-experience__media { height: 330px; overflow: hidden; }
 .sf2-experience__media .sf2-picture__img { transition: transform 0.8s ease; }
 .sf2-experience__card:hover .sf2-picture__img { transform: scale(1.04); }
