@@ -1,0 +1,45 @@
+{% render 'sf2-fonts' %}
+{{ 'sf2-tokens.css' | asset_url | stylesheet_tag }}
+{{ 'sf2-components.css' | asset_url | stylesheet_tag }}
+{{ 'sf2-inner-pages.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'sf2-anchor-nav.js' | asset_url }}" defer="defer"></script>
+
+{%- capture section_style -%}{% render 'sf2-scheme-vars', color_scheme: section.settings.color_scheme, spacing_preset: 'compact' %}{%- endcapture -%}
+{%- assign col_count = section.blocks.size | at_least: 1 -%}
+
+<nav class="sf2-anchor" data-sf2-anchor-nav aria-label="Page sections" style="{{ section_style | strip }}; --sf2-anchor-cols: {{ col_count }};">
+  <div class="sf2-wrap sf2-anchor__grid">
+    {%- for block in section.blocks -%}
+      <a class="sf2-anchor__link" href="{{ block.settings.url }}" {{ block.shopify_attributes }}>{{ block.settings.label }}</a>
+    {%- endfor -%}
+  </div>
+</nav>
+
+<style>
+  html { scroll-padding-top: var(--sf2-scroll-padding, 56px); scroll-behavior: smooth; }
+</style>
+
+{% schema %}
+{
+  "name": "SF2 Anchor Nav",
+  "tag": "section",
+  "class": "sf2-anchor-section",
+  "settings": [
+    { "type": "select", "id": "color_scheme", "label": "Color scheme", "default": "black", "options": [
+      { "value": "dark", "label": "Dark" }, { "value": "black", "label": "Black" }
+    ]}
+  ],
+  "blocks": [
+    {
+      "type": "anchor_link",
+      "name": "Anchor link",
+      "limit": 7,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Section" },
+        { "type": "text", "id": "url", "label": "URL or anchor", "default": "#section" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "SF2 Anchor Nav" }]
+}
+{% endschema %}
