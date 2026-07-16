@@ -77,10 +77,18 @@
   margin-top: 0;
 }
 
-/* Commerce templates — solid black header-group from first paint */
+/* Commerce templates — header in document flow, solid black from first paint */
 .template-collection #header-group,
 .template-search #header-group,
 .template-product #header-group {
+  position: relative;
+  background-color: #000000;
+}
+
+.template-collection #header-group.is-scrolled,
+.template-search #header-group.is-scrolled,
+.template-product #header-group.is-scrolled {
+  position: relative;
   background-color: #000000;
 }
 
