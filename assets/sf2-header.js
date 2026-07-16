@@ -18,10 +18,18 @@
   let lastFocus = null;
 
   function setSolid() {
+    const announcement = document.querySelector('#header-group .announcement-bar');
     const mode = header.dataset.transparency;
     if (mode === 'always_solid') return;
-    if (window.scrollY > 40) header.classList.add('is-solid');
-    else if (mode !== 'always_transparent') header.classList.remove('is-solid');
+    if (window.scrollY > 40) {
+      header.classList.add('is-solid');
+      document.documentElement.style.setProperty('--sf2-header-offset', '0px');
+      if (announcement) announcement.classList.add('is-hidden');
+    } else if (mode !== 'always_transparent') {
+      header.classList.remove('is-solid');
+      if (announcement) announcement.classList.remove('is-hidden');
+      setHeaderOffset();
+    }
   }
 
   function openDrawer() {
