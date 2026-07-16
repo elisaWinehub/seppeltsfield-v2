@@ -1,3 +1,5 @@
+
+
 {% capture submit_button %}
   {% content_for 'block', type: 'contact-form-submit-button', id: 'submit-button' %}
 {% endcapture %}
@@ -271,21 +273,21 @@
       "type": "color",
       "id": "input_background_color",
       "label": "t:settings.background",
-      "default": "{{ settings.color_palette.background }}",
+      "default": "#ffffff",
       "visible_if": "{{ block.settings.input_style == \"custom\" }}"
     },
     {
       "type": "color",
       "id": "input_text_color",
       "label": "t:settings.text",
-      "default": "{{ settings.color_palette.foreground }}",
+      "default": "#000000",
       "visible_if": "{{ block.settings.input_style == \"custom\" }}"
     },
     {
       "type": "color",
       "id": "input_border_color",
       "label": "t:settings.borders",
-      "default": "{{ settings.color_palette.foreground }}",
+      "default": "#000000",
       "visible_if": "{{ block.settings.input_style == \"custom\" }}"
     },
     {

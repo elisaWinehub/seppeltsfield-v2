@@ -1,3 +1,5 @@
+
+
 {% liquid
   if section.settings.background_color != blank
     render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
@@ -22,7 +24,8 @@
 
 {% stylesheet %}
   .utilities {
-    width: 100%;
+    width: min(100% - 3rem, 1200px);
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,6 +47,7 @@
   .utilities a,
   .utilities button {
     color: var(--color-utilities, var(--color-foreground-muted));
+    text-decoration: none;
   }
 
   .utilities > * {
@@ -52,6 +56,12 @@
     @media screen and (min-width: 750px) {
       text-align: left;
       justify-self: start;
+    }
+  }
+
+  @media screen and (max-width: 989px) {
+    .utilities {
+      width: min(100% - 2rem, 1200px);
     }
   }
 
@@ -135,7 +145,7 @@
       "type": "color",
       "id": "background_color",
       "label": "t:settings.background_color",
-      "default": "{{ settings.color_palette.foreground }}"
+      "default": "#000000"
     },
     {
       "type": "range",
