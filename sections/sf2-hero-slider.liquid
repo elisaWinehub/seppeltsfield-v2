@@ -84,7 +84,7 @@
       {%- for block in section.blocks -%}
         {%- if block.type == 'quick_link' -%}
           <a class="sf2-hero__quick" href="{{ block.settings.url }}" {{ block.shopify_attributes }}>
-            <span class="sf2-hero__crest">{% render 'sf2-icon', icon: block.settings.icon %}</span>
+            <span class="sf2-hero__crest">{% render 'sf2-icon', icon: block.settings.icon, size: 20 %}</span>
             <div><b>{{ block.settings.title }}</b><small>{{ block.settings.subtitle }}</small></div>
           </a>
         {%- endif -%}

@@ -3,7 +3,6 @@
 .sf2-hero__slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease; pointer-events: none; }
 .sf2-hero__slide.is-active { opacity: 1; pointer-events: auto; }
 .sf2-hero__bg { position: absolute; inset: 0; }
-.sf2-hero__bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg,rgba(0,0,0,.32),rgba(0,0,0,.03) 38%,rgba(0,0,0,.78)), linear-gradient(90deg,rgba(0,0,0,.62),rgba(0,0,0,.08) 66%); }
 .sf2-hero__bg .sf2-picture__img { transform: scale(1.02); }
 .sf2-hero__content { position: relative; z-index: 2; min-height: inherit; padding-top: 210px; padding-bottom: 150px; display: grid; grid-template-columns: minmax(0,790px) 1fr; align-items: end; gap: 60px; }
 .sf2-hero__mark { display: flex; align-items: center; gap: 14px; }
@@ -21,7 +20,8 @@
 .sf2-hero__quickgrid { min-height: 70px; display: grid; grid-template-columns: repeat(4,1fr); }
 .sf2-hero__quick { padding: 15px 22px; border-left: 1px solid rgba(255,255,255,.12); display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; }
 .sf2-hero__quick:last-child { border-right: 1px solid rgba(255,255,255,.12); }
-.sf2-hero__crest { color: var(--sf-blue); width: 20px; height: 20px; flex: 0 0 auto; }
+.sf2-hero__crest { color: var(--sf-blue); width: 20px; height: 20px; flex: 0 0 auto; display: inline-flex; }
+.sf2-hero__crest .sf2-icon { width: 100%; height: 100%; }
 .sf2-hero__quick b { display: block; font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; }
 .sf2-hero__quick small { font-size: 0.65rem; color: rgba(255,255,255,.56); }
 .sf2-why__head { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 70px; align-items: end; margin-bottom: 44px; }
@@ -29,7 +29,8 @@
 .sf2-why__grid { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--sf-border); border-bottom: 1px solid var(--sf-border); }
 .sf2-why__card { padding: 34px 30px; min-height: 230px; }
 .sf2-why__card + .sf2-why__card { border-left: 1px solid var(--sf-border); }
-.sf2-why__icon { width: 42px; height: 42px; color: var(--sf-blue); margin-bottom: 34px; }
+.sf2-why__icon { width: 34px; height: 34px; color: var(--sf-blue); margin-bottom: 34px; display: inline-flex; }
+.sf2-why__icon .sf2-icon { width: 100%; height: 100%; }
 .sf2-why__card h3 { font-family: var(--sf-font-serif); font-size: 1.85rem; line-height: 1.05; margin: 0 0 12px; }
 .sf2-journey__grid { display: grid; grid-template-columns: repeat(5,1fr); min-height: 420px; }
 .sf2-journey__card { position: relative; overflow: hidden; border-left: 1px solid rgba(255,255,255,.14); color: inherit; text-decoration: none; display: block; }
@@ -70,7 +71,9 @@
 .sf2-history__chapter time { color: #087ba7; font-weight: 600; font-size: 0.8rem; }
 .sf2-history__chapter b { font-family: var(--sf-font-serif); font-size: 1.25rem; font-weight: 400; }
 .sf2-history__image { height: 710px; position: relative; overflow: hidden; }
-.sf2-history__callout { position: absolute; left: -46px; bottom: 44px; background: var(--sf-blue); color: #111; width: 250px; padding: 26px; font-family: var(--sf-font-serif); font-size: 1.4rem; line-height: 1.1; }
+.sf2-history__chapter span { display: inline-flex; width: 18px; height: 18px; flex: 0 0 auto; }
+.sf2-history__chapter .sf2-icon { width: 100%; height: 100%; }
+.sf2-history__callout { position: absolute; left: 11px; bottom: 44px; background: var(--sf-blue); color: #111; width: 250px; padding: 26px; font-family: var(--sf-font-serif); font-size: 1.4rem; line-height: 1.1; }
 .sf2-collection__row { display: grid; grid-template-columns: 1.1fr 0.9fr; min-height: 620px; margin-top: 22px; background: #fff; }
 .sf2-collection__row.is-reverse { grid-template-columns: 0.9fr 1.1fr; }
 .sf2-collection__row.is-reverse .sf2-collection__media { order: 2; }
@@ -147,7 +150,7 @@
   .sf2-hero__dots { bottom: 140px; }
   .sf2-gateway__grid, .sf2-journey__grid, .sf2-experience__grid, .sf2-story__grid, .sf2-footer__grid { grid-template-columns: 1fr; }
   .sf2-club__grid { grid-template-columns: 1fr; }
-  .sf2-history__callout { left: 14px; right: 14px; width: auto; bottom: 14px; }
+  .sf2-history__callout { left: 11px; right: 14px; width: auto; bottom: 14px; }
   .sf2-history__chapter span { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {

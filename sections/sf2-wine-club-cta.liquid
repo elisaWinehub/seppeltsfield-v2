@@ -7,7 +7,7 @@
 
 <section class="sf2-club sf2-section" style="{{ section_style | strip }}">
   <div class="sf2-wrap sf2-club__grid">
-    <div class="sf2-club__crown">{% render 'sf2-icon', icon: section.settings.icon %}</div>
+    <div class="sf2-club__crown">{% render 'sf2-icon', icon: section.settings.icon, size: 58 %}</div>
     <div>
       {% render 'sf2-eyebrow', text: section.settings.eyebrow, brand: true %}
       <h2 class="sf2-serif">{{ section.settings.heading }}</h2>

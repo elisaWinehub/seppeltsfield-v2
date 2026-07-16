@@ -19,7 +19,7 @@
     <div class="sf2-why__grid">
       {%- for block in section.blocks -%}
         <article class="sf2-why__card" {{ block.shopify_attributes }}>
-          <div class="sf2-why__icon">{% render 'sf2-icon', icon: block.settings.icon %}</div>
+          <div class="sf2-why__icon">{% render 'sf2-icon', icon: block.settings.icon, size: 34 %}</div>
           {%- if block.settings.heading != blank -%}<h3>{{ block.settings.heading }}</h3>{%- endif -%}
           {%- if block.settings.body != blank -%}<div>{{ block.settings.body }}</div>{%- endif -%}
         </article>

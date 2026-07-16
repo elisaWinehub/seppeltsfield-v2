@@ -1,14 +1,19 @@
 {%- doc -%}
   @param {string} icon - search | account | cart | arrow-right | crown | heritage | collection | destination | clock | map-pin | calendar
   @param {string} [class]
+  @param {number} [size] - width and height in px
 {%- enddoc -%}
 {%- liquid
   assign icon_class = 'sf2-icon'
   if class != blank
     assign icon_class = icon_class | append: ' ' | append: class
   endif
+  assign icon_style = blank
+  if size != blank
+    assign icon_style = 'width: ' | append: size | append: 'px; height: ' | append: size | append: 'px;'
+  endif
 -%}
-<span class="{{ icon_class }}" aria-hidden="true">
+<span class="{{ icon_class }}"{% if icon_style != blank %} style="{{ icon_style }}"{% endif %} aria-hidden="true">
   {%- case icon -%}
     {%- when 'search' -%}
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4"/></svg>
