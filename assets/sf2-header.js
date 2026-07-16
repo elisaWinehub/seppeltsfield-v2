@@ -60,6 +60,29 @@ function initHeaderScrollState() {
   });
 }
 
+function scrollToTop() {
+  getScrollContainer().scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function initBackToTop() {
+  const button = document.querySelector('[data-sf2-back-to-top]');
+  const scrollContainer = getScrollContainer();
+  if (!button || !scrollContainer) return;
+
+  const showOffset = 320;
+
+  function updateBackToTop() {
+    const visible = getScrollTop() > showOffset;
+    button.hidden = !visible;
+    button.classList.toggle('is-visible', visible);
+  }
+
+  button.addEventListener('click', scrollToTop);
+  scrollContainer.addEventListener('scroll', updateBackToTop, { passive: true });
+  window.addEventListener('scroll', updateBackToTop, { passive: true });
+  updateBackToTop();
+}
+
 function initHeaderDrawer() {
   const drawer = document.querySelector('[data-sf2-drawer]');
   const openBtns = document.querySelectorAll('[data-sf2-menu-open]');
@@ -102,4 +125,5 @@ function initHeaderDrawer() {
 document.addEventListener('DOMContentLoaded', function () {
   initHeaderScrollState();
   initHeaderDrawer();
+  initBackToTop();
 });
