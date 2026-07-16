@@ -104,6 +104,7 @@
 .sf2-newsletter__form button { border: 0; background: transparent; color: #fff; padding: 0 0 0 20px; cursor: pointer; }
 .sf2-newsletter__form button .sf2-icon { width: 21px; height: 21px; }
 .sf2-newsletter__feedback { margin: 14px 0 0; font-size: 0.82rem; color: rgba(255,255,255,0.75); }
+.sf2-footer { background: #0c0d0f; color: #fff; padding: 68px 0 30px; }
 .sf2-footer__grid { display: grid; grid-template-columns: 1.4fr repeat(4,1fr); gap: 36px; }
 .sf2-footer__logo img { max-width: 190px; filter: brightness(0) invert(1); }
 .sf2-footer__blurb { max-width: 300px; color: rgba(255,255,255,.5); font-size: 0.74rem; margin-top: 22px; }
