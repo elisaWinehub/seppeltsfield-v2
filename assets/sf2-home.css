@@ -76,8 +76,17 @@
 .sf2-history__chapter span { display: inline-flex; width: 18px; height: 18px; flex: 0 0 auto; }
 .sf2-history__chapter .sf2-icon { width: 100%; height: 100%; }
 .sf2-history__callout { position: absolute; left: 11px; bottom: 44px; background: var(--sf-blue); color: #111; width: 250px; padding: 26px; font-family: var(--sf-font-serif); font-size: 1.4rem; line-height: 1.1; }
-.sf2-collection.sf2-section { --sf2-pad-bottom-m: 0; --sf2-pad-bottom-d: 0; }
-.sf2-collection__row { display: grid; grid-template-columns: 1.1fr 0.9fr; min-height: 620px; margin-top: 0; background: #fff; }
+.sf2-collection.sf2-section { --sf2-pad-bottom-m: 0; --sf2-pad-bottom-d: 0; background: #F5F7F8; }
+.sf2-collection__row {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  min-height: 620px;
+  margin-top: 22px;
+  margin-inline: auto;
+  max-width: var(--sf-max);
+  width: min(calc(100% - 48px), var(--sf-max));
+  background: #fff;
+}
 .sf2-collection__row.is-reverse { grid-template-columns: 0.9fr 1.1fr; }
 .sf2-collection__row.is-reverse .sf2-collection__media { order: 2; }
 .sf2-collection__media { position: relative; overflow: hidden; }
@@ -89,7 +98,7 @@
 .sf2-collection__meta span { padding-right: 18px; border-right: 1px solid var(--sf-border); }
 .sf2-collection__index { position: absolute; left: 24px; top: 24px; z-index: 2; background: rgba(10,11,13,.86); color: #fff; padding: 9px 12px; font-size: 0.65rem; letter-spacing: 0.12em; }
 .sf2-collection__label { position: absolute; left: 26px; top: 26px; z-index: 2; background: rgba(10,11,13,.88); color: #fff; padding: 10px 13px; font-size: 0.65rem; letter-spacing: 0.12em; }
-.sf2-collection--contained .sf2-collection__row { margin-top: 0; grid-template-columns: 1.15fr 0.85fr; min-height: 720px; }
+.sf2-collection--contained .sf2-collection__row { margin-top: 22px; max-width: none; width: 100%; grid-template-columns: 1.15fr 0.85fr; min-height: 720px; }
 .sf2-collection--contained .sf2-collection__row.is-reverse { grid-template-columns: 0.85fr 1.15fr; }
 .sf2-collection--contained .sf2-collection__media .sf2-picture__img { min-height: 720px; }
 .sf2-collection--contained .sf2-collection__media::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,.48)); pointer-events: none; }
@@ -155,6 +164,7 @@
   .sf2-club__grid { grid-template-columns: 1fr; }
   .sf2-history__callout { left: 11px; right: 14px; width: auto; bottom: 14px; }
   .sf2-history__chapter span { display: none; }
+  .sf2-collection__row { width: min(calc(100% - 28px), var(--sf-max)); }
 }
 @media (prefers-reduced-motion: reduce) {
   .sf2-hero__slide { transition: none; }
