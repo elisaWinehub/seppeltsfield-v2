@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "shop_hero": {
@@ -15,6 +24,7 @@
         "button_preset": "primary_blue",
         "secondary_button_label": "",
         "secondary_button_url": "",
+        "secondary_button_preset": "outline_light",
         "show_side_note": true,
         "note_heading": "Begin with the collection.",
         "note_body": "Discover rare fortified wines, contemporary releases, curated gifts and memorable estate experiences.",
@@ -28,9 +38,9 @@
         "featured_1": {
           "type": "collection_row",
           "settings": {
-            "collection": "",
+            "collection": "para-tawny",
             "title_override": "Centennial Collection",
-            "image": "shopify://shop_images/provenance-of-para-HERO.jpg",
+            "image": "shopify://shop_images/seppelsfield-oct24-0060-web-1751248450385.jpg",
             "label_text": "Featured Collection",
             "eyebrow": "The icon",
             "body": "<p>An extraordinary lineage of single-vintage Para Tawny matured in the historic Centennial Cellar.</p>",
@@ -40,7 +50,9 @@
           }
         }
       },
-      "block_order": ["featured_1"],
+      "block_order": [
+        "featured_1"
+      ],
       "settings": {
         "eyebrow": "",
         "heading": "",
@@ -68,7 +80,7 @@
           "settings": {
             "collection": "",
             "title_override": "Fortified Wines",
-            "image": "shopify://shop_images/Seppelsfield-OCT24-0208.jpg",
+            "image": "shopify://shop_images/para-grand--glasses-on-side-table-by-sofa-1687414300459.jpg",
             "body": "Rich and complex expressions reflecting one of Seppeltsfield's defining winemaking traditions.",
             "url_override": "/collections/fortified-wines"
           }
@@ -78,7 +90,7 @@
           "settings": {
             "collection": "",
             "title_override": "Gift Packs",
-            "image": "shopify://shop_images/Seppelsfield-OCT24-0145.jpg",
+            "image": "shopify://shop_images/Seppeltsfield-OCT25-0017-scaled.jpg",
             "body": "Curated combinations for celebrations, milestones and meaningful occasions.",
             "url_override": "/collections/gift-packs"
           }
@@ -88,7 +100,7 @@
           "settings": {
             "collection": "",
             "title_override": "Cellar Door Products",
-            "image": "shopify://shop_images/cellar-door-tasting.jpg",
+            "image": "shopify://shop_images/Seppelsfield-OCT24-0122.jpg",
             "body": "Estate merchandise, specialty items and products connected to a visit to Seppeltsfield.",
             "url_override": "/collections/cellar-door-products"
           }
@@ -98,7 +110,7 @@
           "settings": {
             "collection": "",
             "title_override": "Limited Releases",
-            "image": "shopify://shop_images/Para-Grand-Tawny-91-Points.jpg",
+            "image": "shopify://shop_images/Cellar-_-Home-WP.png",
             "body": "Rare and seasonal releases showcasing the depth and character of Seppeltsfield winemaking.",
             "url_override": "/collections/limited-releases"
           }
@@ -108,13 +120,20 @@
           "settings": {
             "collection": "",
             "title_override": "Gift Vouchers",
-            "image": "shopify://shop_images/Member-Partner-Offers.jpg",
+            "image": "shopify://shop_images/Screenshot_2026-07-17_at_6.24.26_AM.png",
             "body": "Flexible gifting for wine, dining and experiences across the Seppeltsfield estate.",
             "url_override": "/collections/gift-vouchers"
           }
         }
       },
-      "block_order": ["c1", "c2", "c3", "c4", "c5", "c6"],
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6"
+      ],
       "settings": {
         "eyebrow": "Explore the range",
         "heading": "Shop by collection.",
@@ -132,7 +151,7 @@
         "body": "<p>Pair the Shop journey with tastings, estate tours, dining and accommodation experiences available across Seppeltsfield.</p>",
         "link_label": "Explore experiences",
         "link_url": "/pages/book-experience",
-        "image": "shopify://shop_images/finoHERO.jpg",
+        "image": "shopify://shop_images/N_Breen_BoatOCraigo-114.jpg",
         "badge_text": "Wine · Dining · Stay",
         "layout": "copy_left",
         "color_scheme": "dark",

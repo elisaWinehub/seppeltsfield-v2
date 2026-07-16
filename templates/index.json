@@ -178,7 +178,7 @@
           "settings": {
             "image": "shopify://shop_images/Seppelsfield-OCT24-0004.jpg",
             "title": "Shop",
-            "url": "/pages/shop"
+            "url": "/collections"
           }
         },
         "journey_4": {
@@ -394,7 +394,7 @@
           "settings": {
             "collection": "",
             "title_override": "Gifting",
-            "image": "shopify://shop_images/ip-three-pack-may2025-1746507353996.png",
+            "image": "shopify://shop_images/Screenshot_2026-07-17_at_6.24.26_AM.png",
             "label_text": "",
             "eyebrow": "The art of giving",
             "body": "<p>Curated wines, gift packs and vouchers presented with the elegance expected from the Seppeltsfield estate.</p>",
