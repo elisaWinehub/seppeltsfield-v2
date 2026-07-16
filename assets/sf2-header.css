@@ -77,13 +77,11 @@
   margin-top: 0;
 }
 
-/* Commerce templates — header in document flow, solid black from first paint */
+/* Commerce product/collection — relative on load, fixed once scrolling */
 #header-group.sf2-header-group--in-flow,
 body:has(#MainContent[data-template='product']) #header-group,
 body:has(#MainContent[data-template='collection']) #header-group,
-body:has(#MainContent[data-template='search']) #header-group,
 .template-collection #header-group,
-.template-search #header-group,
 .template-product #header-group {
   position: relative;
   top: auto;
@@ -95,15 +93,21 @@ body:has(#MainContent[data-template='search']) #header-group,
 #header-group.sf2-header-group--in-flow.is-scrolled,
 body:has(#MainContent[data-template='product']) #header-group.is-scrolled,
 body:has(#MainContent[data-template='collection']) #header-group.is-scrolled,
-body:has(#MainContent[data-template='search']) #header-group.is-scrolled,
 .template-collection #header-group.is-scrolled,
-.template-search #header-group.is-scrolled,
 .template-product #header-group.is-scrolled {
-  position: relative;
-  top: auto;
-  left: auto;
-  right: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   background-color: #000000;
+}
+
+.template-product:has(#header-group.is-scrolled) #MainContent,
+.template-collection:has(#header-group.is-scrolled) #MainContent,
+body:has(#MainContent[data-template='product']):has(#header-group.is-scrolled) #MainContent,
+body:has(#MainContent[data-template='collection']):has(#header-group.is-scrolled) #MainContent {
+  padding-top: var(--sf2-header-group-height, 92px);
 }
 
 @media (max-width: 1000px) {

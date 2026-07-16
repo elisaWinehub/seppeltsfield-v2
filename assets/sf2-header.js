@@ -17,10 +17,11 @@ function initHeaderScrollState() {
 
   const mode = header.dataset.transparency;
   const commerceSolid = header.dataset.commerceSolid === 'true';
-  const alwaysSolid = mode === 'always_solid' || commerceSolid;
+  const commerceScrollFixed = header.dataset.commerceScrollFixed === 'true';
+  const alwaysSolid = mode === 'always_solid' || (commerceSolid && !commerceScrollFixed);
   const alwaysTransparent = mode === 'always_transparent';
 
-  if (commerceSolid) {
+  if (commerceScrollFixed) {
     headerGroup.classList.add('sf2-header-group--in-flow');
   }
 
@@ -33,6 +34,12 @@ function initHeaderScrollState() {
 
   function updateHeaderState() {
     const scrolled = getScrollTop() > 0;
+
+    if (commerceScrollFixed) {
+      headerGroup.classList.toggle('is-scrolled', scrolled);
+      headerGroup.classList.toggle('has-scrolled-header', scrolled);
+      return;
+    }
 
     if (alwaysSolid) {
       headerGroup.classList.add('is-scrolled');

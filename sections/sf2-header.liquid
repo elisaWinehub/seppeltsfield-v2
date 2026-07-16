@@ -17,6 +17,7 @@
   assign transparent = false
   assign hero_header = false
   assign commerce_solid = false
+  assign commerce_scroll_fixed = false
 
   if section.settings.transparency_mode == 'always_transparent'
     assign transparent = true
@@ -29,6 +30,9 @@
       assign transparent = true
       assign hero_header = true
     endif
+    if template.name == 'collection' or template.name == 'product'
+      assign commerce_scroll_fixed = true
+    endif
   endif
 -%}
 
@@ -38,6 +42,7 @@
   data-transparency="{{ section.settings.transparency_mode }}"
   data-hero-header="{% if hero_header %}true{% else %}false{% endif %}"
   data-commerce-solid="{% if commerce_solid %}true{% else %}false{% endif %}"
+  data-commerce-scroll-fixed="{% if commerce_scroll_fixed %}true{% else %}false{% endif %}"
   style="--sf2-logo-width: {{ logo_w }}px;"
 >
   <div class="sf2-wrap sf2-header__nav">
