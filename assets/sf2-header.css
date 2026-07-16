@@ -20,9 +20,11 @@
 
 .sf2-header__nav { height: 92px; display: grid; grid-template-columns: 240px 1fr auto; align-items: center; gap: 25px; }
 .sf2-header__logo img { width: auto; max-width: var(--sf2-logo-width, 188px); height: auto; object-fit: contain; }
-.sf2-header__links { display: flex; justify-content: center; gap: 28px; font-size: 0.75rem; list-style: none; margin: 0; padding: 0; }
-.sf2-header__links a { opacity: 0.86; text-decoration: none; color: inherit; }
-.sf2-header__links a:hover, .sf2-header__links a:focus-visible { opacity: 1; }
+.sf2-header__links { display: flex; justify-content: center; gap: 28px; font-size: 1em; text-transform: uppercase; list-style: none; margin: 0; padding: 0; }
+.sf2-header__links a { opacity: 0.86; text-decoration: none; color: inherit; transition: color 0.25s ease, opacity 0.25s ease; }
+.sf2-header__links a.is-active { color: var(--sf-blue); opacity: 1; }
+.sf2-header__links a:hover,
+.sf2-header__links a:focus-visible { color: var(--sf-blue); opacity: 1; }
 .sf2-header__actions { display: flex; align-items: center; gap: 10px; }
 .sf2-header__round { width: 38px; height: 38px; border: 1px solid rgba(255,255,255,0.38); border-radius: 50%; background: transparent; color: #fff; display: grid; place-items: center; padding: 0; cursor: pointer; }
 .sf2-header__round .sf2-icon { width: 17px; height: 17px; }
