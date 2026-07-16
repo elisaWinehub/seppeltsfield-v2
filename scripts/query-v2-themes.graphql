@@ -1,0 +1,8 @@
+query {
+  main: theme(id: "gid://shopify/OnlineStoreTheme/157991338136") {
+    id name processing processingFailed themeStoreId
+  }
+  staging: theme(id: "gid://shopify/OnlineStoreTheme/157991370904") {
+    id name processing processingFailed themeStoreId
+  }
+}
