@@ -67,7 +67,7 @@
     {%- endif -%}
 
     <div class="sf2-header__actions">
-      {% render 'sf2-button', preset: 'light', label: section.settings.cta_label, url: section.settings.cta_url, class: 'sf2-header__cta' %}
+      {% render 'sf2-button', preset: 'outline_light', label: section.settings.cta_label, url: section.settings.cta_url, class: 'sf2-header__cta' %}
       <button class="sf2-header__round sf2-header__menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="Sf2HeaderDrawer-{{ section.id }}" data-sf2-menu-open>
         <span class="sf2-icon">{{ 'icon-menu.svg' | inline_asset_content }}</span>
       </button>
@@ -94,7 +94,7 @@
           {%- endfor -%}
         </ul>
       {%- endif -%}
-      {% render 'sf2-button', preset: 'light', label: section.settings.cta_label, url: section.settings.cta_url %}
+      {% render 'sf2-button', preset: 'outline_light', label: section.settings.cta_label, url: section.settings.cta_url %}
     </div>
   </div>
 </header>

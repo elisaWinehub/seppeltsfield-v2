@@ -4,6 +4,11 @@
   z-index: 50;
 }
 
+#header-group,
+.shopify-section.sf2-header-section {
+  background-color: transparent;
+}
+
 .sf2-header {
   position: sticky;
   top: 0;
@@ -20,7 +25,7 @@
   background-color: #000000;
 }
 
-.sf2-header__nav { height: 92px; display: grid; grid-template-columns: 240px 1fr auto; align-items: center; gap: 25px; }
+.sf2-header__nav { height: 92px; display: grid; grid-template-columns: 240px 1fr auto; align-items: center; gap: 25px; background-color: transparent; }
 .sf2-header__logo img { width: auto; max-width: var(--sf2-logo-width, 188px); height: auto; object-fit: contain; }
 .sf2-header__links { display: flex; justify-content: center; gap: 28px; font-size: 1em; text-transform: uppercase; list-style: none; margin: 0; padding: 0; }
 .sf2-header__links a { opacity: 0.86; text-decoration: none; color: inherit; transition: color 0.25s ease, opacity 0.25s ease; }
@@ -35,9 +40,9 @@
 .sf2-header__drawer.is-open { pointer-events: auto; }
 .sf2-header__drawer-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.5); opacity: 0; transition: opacity 0.3s; }
 .sf2-header__drawer.is-open .sf2-header__drawer-backdrop { opacity: 1; }
-.sf2-header__drawer-panel { position: absolute; top: 0; right: 0; width: min(360px, 90vw); height: 100%; background: var(--sf-coal-deep); color: #fff; transform: translateX(100%); transition: transform 0.3s; padding: 24px; overflow-y: auto; }
+.sf2-header__drawer-panel { position: absolute; top: 0; right: 0; width: min(360px, 90vw); height: 100%; background-color: #000000; color: #fff; transform: translateX(100%); transition: transform 0.3s; padding: 24px; overflow-y: auto; }
 .sf2-header__drawer.is-open .sf2-header__drawer-panel { transform: translateX(0); }
-.sf2-header__drawer-nav { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 16px; }
+.sf2-header__drawer-nav { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 16px; background-color: transparent; }
 .sf2-header__drawer-nav a { color: inherit; text-decoration: none; font-size: 1rem; }
 
 /* Pull hero sections under the sticky header on hero-bearing templates */
@@ -49,7 +54,7 @@
 @media (max-width: 1000px) {
   .sf2-header__links { display: none; }
   .sf2-header__menu-btn { display: grid; }
-  .sf2-header__actions .sf2-btn--light { display: none; }
+  .sf2-header__actions .sf2-btn--outline_light { display: none; }
   .sf2-header__nav { grid-template-columns: 1fr auto; }
 }
 @media (max-width: 650px) {
