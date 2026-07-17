@@ -5,7 +5,23 @@
 
 {%- capture section_style -%}{% render 'sf2-scheme-vars', color_scheme: section.settings.color_scheme, spacing_preset: section.settings.spacing_preset %}{%- endcapture -%}
 
-<section class="sf2-col-banner sf2-section" style="{{ section_style | strip }}">
+{%- liquid
+  assign has_banner_image = false
+  if section.settings.custom_image != blank
+    assign has_banner_image = true
+  endif
+  assign back_button_preset = 'outline_dark'
+  if has_banner_image
+    assign back_button_preset = 'outline_light'
+  endif
+-%}
+
+<section class="sf2-col-banner sf2-section{% if has_banner_image %} sf2-col-banner--has-image{% endif %}" style="{{ section_style | strip }}">
+  {%- if has_banner_image -%}
+    <div class="sf2-col-banner__bg" aria-hidden="true">
+      {% render 'sf2-picture', image: section.settings.custom_image, loading: 'eager', sizes: '100vw' %}
+    </div>
+  {%- endif -%}
   <div class="sf2-wrap sf2-col-banner__grid">
     <div class="sf2-col-banner__copy">
       {% render 'sf2-eyebrow', text: section.settings.eyebrow, brand: true %}
@@ -15,14 +31,9 @@
       {%- endif -%}
     </div>
     {%- if section.settings.back_button_label != blank -%}
-      {% render 'sf2-button', preset: 'outline_dark', label: section.settings.back_button_label, url: section.settings.back_button_url, class: 'sf2-col-banner__back' %}
+      {% render 'sf2-button', preset: back_button_preset, label: section.settings.back_button_label, url: section.settings.back_button_url, class: 'sf2-col-banner__back' %}
     {%- endif -%}
   </div>
-  {%- if section.settings.custom_image != blank -%}
-    <div class="sf2-col-banner__media sf2-wrap">
-      {% render 'sf2-picture', image: section.settings.custom_image, sizes: '(min-width: 990px) 1320px, 100vw' %}
-    </div>
-  {%- endif -%}
 </section>
 
 {% schema %}
